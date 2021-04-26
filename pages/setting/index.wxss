@@ -1,0 +1,87 @@
+.wrap {
+    width: 100%;
+    background: #f5f5f5;
+    font-family: "iconfont";
+    height: 100vh;
+    position: relative;
+}
+
+.saveBtn {
+    width: 90%;
+    background: #0FC7E3;
+    color: #ffffff;
+    height: 100rpx;
+    border-radius: 10rpx;
+    line-height: 100rpx;
+    text-align: center;
+    /* margin: 0 auto; */
+    position: absolute;
+    bottom: 40rpx;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.form {
+    background: #ffffff;
+    margin-bottom: 20rpx;
+}
+
+.table-item {
+    width: 90%;
+    margin: 0 auto;
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx #F2F4F7 solid;
+    background: #ffffff;
+}
+
+.table-item:last-child {
+    border: none;
+}
+
+.table-name {
+    width: 25%;
+    /* text-align: right; */
+}
+input {
+    text-align: right;
+}
+.changehead {
+    display: flex;
+    align-items: center;
+}
+
+.changehead>image {
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 50%;
+}
+
+.changehead>text {
+    color: #cccccc;
+    font-family: "iconfont";
+    padding-left: 15rpx;
+}
+
+input {
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.addr {
+    width: 75%;
+}
+
+.addricon {
+    font-family: "iconfont";
+    color: #0FC7E3;
+    font-size: 32rpx;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}

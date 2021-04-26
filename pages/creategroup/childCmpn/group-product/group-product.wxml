@@ -1,0 +1,36 @@
+<!--pages/creategroup/childCmpn/group-product/group-product.wxml-->
+
+<view class="product-wraper">
+	<view class="item-product-title">
+		<view class="pro-number">商品{{proIndex}}</view>
+		<view class="delete-wraper" bindtap="onDeleteProduct">删除</view>
+	</view>
+	<view class="item-wraper">
+		<view class="item item-name">商品名称</view>
+		<view class="item item-value">{{product.proName}}</view>
+	</view>
+	<view class="item-wraper">
+		<view class="item item-name">商品描述</view>
+		<view class="item item-value">{{product.describeContext}}</view>
+	</view>
+	<view class="item-wraper">
+		<view class="item item-name">商品规格</view>
+		<view class="item item-value">{{product.oneRule}}</view>
+	</view>
+	<view class="item-wraper">
+		<view class="item item-name">商品价格(￥)</view>
+		<view class="item item-value">{{product.proPrice}}</view>
+	</view>
+	<view class="item-wraper">
+		<view class="item item-name">划线价格(￥)</view>
+		<view class="item item-value">{{product.crossedPrice}}</view>
+	</view>
+	<view class="item-wraper">
+		<view class="item item-name">商品库存</view>
+		<view class="item item-value">{{product.surplusStock}}</view>
+	</view>
+	<view class="item-wraper border-none">
+		<view class="item item-name">可购数量</view>
+        <input class="item input-value" placeholder="请输入可购买数量" type="number" placeholder-class="placeholder" bindblur="selctNumberChange" value="{{product.limitBuy}}"/>
+	</view>
+</view>

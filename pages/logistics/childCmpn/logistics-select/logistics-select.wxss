@@ -1,0 +1,46 @@
+/* pages/logistics/childCmpn/logistics-select/logistics-select.wxss */
+
+.select-wraper {
+    background-color: #F4F6F9;
+    border-radius: 10rpx;
+    margin-top: 30rpx;
+}
+
+.select-item-wraper {
+    height: 88rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.border-bottom {
+    border-bottom: 2rpx solid #cdcdcd;
+}
+
+.title {
+    color: #8a8a8a;
+    font-size: 26rpx;
+    margin-left: 20rpx;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.value {
+    color: #242629;
+    font-size: 26rpx;
+}
+
+.value-none {
+    color: #FF5050;
+    font-size: 26rpx;
+}
+
+.more-image {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    width: 13rpx;
+    height: 22rpx;
+}

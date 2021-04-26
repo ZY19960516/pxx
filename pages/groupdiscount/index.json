@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "团优惠设置",
+  "usingComponents": {
+    "create-discount": "./childCmpn/create-discount/create-discount",
+    "discount-item": "./childCmpn/discount-item/discount-item"
+  }
+}

@@ -1,0 +1,77 @@
+/* pages/captain/index.wxss */
+/* pages/home/index.wxss */
+page {
+   height: 100vh;
+   background-color: #F0F0F0;
+}
+
+.box {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.list{
+   flex: 1;
+}
+.header {
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   padding: 20rpx 20rpx 30rpx 20rpx;
+   min-height: 220rpx;
+}
+
+.header_card {
+   display: flex;
+   flex: 1;
+   padding-left: 18rpx;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.flexInfo {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10rpx;
+}
+
+.edit {
+   height: 50rpx;
+   line-height: 50rpx;
+   color: #40CF84;
+   font-size: 26rpx;
+   text-align: center;
+   border-radius: 4rpx;
+   width: 140rpx;
+   border: 1px solid #40CF84;
+}
+
+.item-header-icon {
+   width: 120rpx;
+   height: 120rpx;
+   border-radius: 8rpx;
+}
+
+.h-line {
+   width: 100%;
+   height: 1rpx;
+   background-color: #F4F4F4;
+   margin-top: 20rpx;
+   margin-bottom: 20rpx;
+}
+
+.text-black-member {
+   color: #181818;
+   font-size: 34rpx;
+}
+
+.text-gray {
+   color: #A4A4A4;
+   font-size: 24rpx;
+}
+
+.text-black {
+   color: #181818;
+   font-size: 30rpx;
+}

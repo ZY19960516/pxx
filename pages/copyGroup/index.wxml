@@ -1,0 +1,20 @@
+<!--pages/copyGroup/index.wxml-->
+<view class="wraper">
+    <block wx:for="{{listSource}}" wx:key="index">
+        <view class="list-wraper">
+            <view class="list-title">{{item.groupTittle}}</view>
+            <view class="list-price-time">
+                <text class="list-price">￥<text class="price">{{item.startingAmount}}</text></text>
+                <text class="list-time">开团时间：{{item.createdAt}}</text>
+            </view>
+            <view class="image-wraper">
+                <block wx:for="{{item.imgList}}" wx:for-index="indey" wx:for-item="img" wx:key="indey">
+                    <image class="list-image" src="{{img}}" mode="aspectFit"/>
+                </block>
+            </view>
+            <view class="list-button" bindtap="onSelectCopy" data-item="{{item}}">复制开团</view>
+        </view>
+    </block>
+    <view wx:if="{{isLast && listSource.length > 0}}" class="noMore">没有更多了~</view>
+    <no-data wx:if="{{listSource.length == 0}}" />
+</view>

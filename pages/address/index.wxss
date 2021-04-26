@@ -1,0 +1,43 @@
+/* pages/address/index.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background-color: #F4F6F9;
+}
+
+.wraper {
+    padding-bottom: 150rpx;
+}
+
+.bottom-btn-wraper {
+    background-color: #fff;
+    height: 150rpx;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 620;
+    padding: 20rpx 32rpx 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-item {
+    background-color: #0FC7E3;
+    color: #fff;
+    
+}
+
+.add-item {
+    border: 2rpx solid #0FC7E3;
+    color: #0FC7E3;
+}
+
+.btn {
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    width: 45%;
+}

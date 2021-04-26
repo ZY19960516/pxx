@@ -1,0 +1,23 @@
+<!--pages/productlibrary/index.wxml-->
+<!-- 添加商品按钮 -->
+<view class="library-wraper">
+	<view class="header">
+		<product-add-button bindselect="onSelectAddProduct" />
+	</view>
+	<!-- 下面部分 -->
+	<view class="content">
+		<!-- 下面左边部分 -->
+		<scroll-view class="left" scroll-y="true" enable-back-to-top>
+			<product-add-left categorys="{{categorys}}" bindselect="onSelectCategory" />
+		</scroll-view>
+		<!-- 下面右边部分 -->
+		<scroll-view class="right" scroll-y="true" enable-back-to-top>
+			<product-add-right source="{{products}}" showNoMore="{{isLast}}" bindcheck="onCheckSource" bindsource="onEditProduct" binddelete="onDeleteProduct"/>
+		</scroll-view>
+	</view>
+	<!-- 底部 -->
+	<view class="footer">
+    	<text class="text total-count">共选择<text class="select-count">{{selectProducts.length}}</text>件</text>
+    	<view class="text confirm-btn" bindtap="confirmSelected">确认选择</view>
+	</view>
+</view>

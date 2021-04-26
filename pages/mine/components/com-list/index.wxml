@@ -1,0 +1,20 @@
+<view class="wraper" wx:if="{{newList.length > 0}}">
+	<view class="listBox" wx:for="{{newList}}"  wx:key="index">
+		<text class="icon-shouru iconfont iconColorget" wx:if="{{item.type == 1}}"></text>
+		<text class="icon-tixian iconfont iconColorsend" wx:elif="{{item.type == 2}}"></text>
+		<image src="{{item.memberAvatar}}" wx:elif="{{item.type == 3}}"></image>
+		<view class="centerBox">
+			<!-- 交易号:{{item.transactionNo}}- -->
+			<text >{{itemTitle}}：{{item.title}}</text>
+			<text >{{item.type == 3 ? '入团时间' :'交易时间'}}：{{item.date}}</text>
+		</view>
+		<text class="amount" wx:if="{{detailsType == 'BillingDetails' || detailsType == 'IncomeDetails'}}">{{item.type == 1 ? '+' : '-'}}{{item.amount}}</text>
+	</view>
+	<view class="nomore">
+		没有更多了~
+	</view>
+</view>
+<view class="noData" wx:else>
+	<text class="iconfont icon-meiyoudingdan"></text>
+	<text >{{detailsType == 'leagueMember' ? '您暂时没有团员可以将团、商品分享给好友，让他成为你的团员！' : '暂时没有明细哦~'}}</text>
+</view>

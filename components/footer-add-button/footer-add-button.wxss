@@ -1,0 +1,22 @@
+/* components/footer-add-button/footer-add-button.wxss */
+
+.footer-wraper {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    height: 150rpx;
+    z-index: 1000;
+}
+
+.footer {
+    background-color: #0FC7E3;
+    color: #fff;
+    font-size: 30rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    margin: 20rpx 32rpx 0;
+    border-radius: 8rpx;
+}

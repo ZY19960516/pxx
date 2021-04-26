@@ -1,0 +1,26 @@
+/* pages/groupdiscount/childCmpn/discount-item/discount-item.wxss */
+
+.item-wraper {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    padding: 32rpx;
+    margin-top: 20rpx;
+    border-radius: 16rpx;
+    justify-content: space-between;
+}
+
+.discount-text {
+    color: #242629;
+    font-size: 34rpx;
+}
+
+.discount {
+    color: #FF5050;
+    font-size: 34rpx;
+}
+
+.discount-delete{
+    color: #0FC7E3;
+    font-size: 30rpx;
+}

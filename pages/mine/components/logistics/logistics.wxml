@@ -1,0 +1,21 @@
+<!-- 物流信息 -->
+<view class="logistics">
+    <view class="logics-header">
+        <text class="grayText">快递地址</text>
+        <text wx:if="{{showCheckWuliu}}" class="check-wuliu" bindtap="onChcekWuliu">查看物流</text>
+    </view>
+    <view class="information">
+        <text class="icon-wo iconfont rightMargin" ></text>
+        <text class="name rightMargin com-font">{{receiptName}}</text>
+        <text class="phone rightMargin com-font">{{receiptPhone}}</text>
+        <text class="icon-weibiaoti- iconfont rightMargin" bindtap="makePhone" ></text>
+    </view>
+    <view class="information">
+        <text class="icon-didian iconfont rightMargin"></text>
+        <text class="receiptAddress rightMargin com-font">{{receiptProvince+receiptCity+receiptArea+receiptAddress}}</text>
+        <text class="copy com-font" bindtap="onSelectCopyNumber">点击复制</text>
+    </view>
+    <!-- <view class="remarks">
+        <text >团长备注：<text >暂无团长备注</text></text>
+    </view> -->
+</view>

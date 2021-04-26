@@ -1,0 +1,18 @@
+<!--pages/groupdiscount/childCmpn/create-discount-alert/create-discount-alert.wxml-->
+<alert-center-box show="{{showAlert}}" bindcancel="onSelectCancel" bindconfirm="onSelectConfirm">
+    <view class="content">
+        <view class="title">金额设置</view>
+        <view class="set-wraper">
+            <view class="input-wraper">
+                <text class="input-title">满</text>
+                <input class="input" type="number" maxlength="7" value="{{maxAmount}}" placeholder="请输入金额" placeholder-class="input-placeholder" bindblur="onFinishedMaxAmount"/>
+                <text class="input-title">元</text>
+            </view> 
+            <view class="input-wraper">
+                <text class="input-title">减</text>
+                <input class="input" type="number" maxlength="7" value="{{discount}}" placeholder="请输入金额" placeholder-class="input-placeholder" bindblur="onFinishedDiscountAmount"/>
+                <text class="input-title" >元</text>
+            </view>
+        </view>
+    </view>
+</alert-center-box>

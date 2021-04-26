@@ -1,0 +1,78 @@
+<!--pages/homepage/index.wxml-->
+<view class="content">
+		<view class="item">
+			<view class="cardTop">
+				<view class="cardInfo" bindtap="goSetpage">
+					<image src="{{userInfo.headerImg}}" class="headpic"></image>
+					<view class="textareabox">
+						<text class="name">{{userInfo.leaderName}}</text>
+						<textarea name=""  cols="30" rows="3" readonly disabled>{{userInfo.introduction}}</textarea>
+					</view>
+					<view class="editBtn">
+						<text class="icon-bianji1"></text>编辑主页
+					</view>
+				</view>
+				<view class="cardInfobox" bindtap="chooseLocation">
+					<view class="address">
+						<text class="addressIcon icon-didian"></text>
+						<text class="addr">{{userInfo.Locationname}}</text>
+					</view>
+					<view class="cardToset">
+						<text>去设置</text><text class="addressIcon icon-tubiao-"></text>
+					</view>
+				</view>
+				
+			</view>
+			<view class="cardBottom">
+				<view class="friend">
+					已有<text class="friendnum">{{userInfo.membersNum}}</text>位团员<text class="moreicon icon-tubiao-"></text>
+				</view>
+				<view class="sharefriend">
+					<text class="icon-weixin"></text>邀请好友
+				</view>
+			</view>
+		</view>
+		<view class="content-box" >
+				<view class="item-top">
+					<view class="item-left">
+						<!-- <img src="../../static/ic_menu_choice_nor.png" mode=""> -->
+						<image src="{{userInfo.headerImg}}"></image>
+						<view class="infoBox">
+							<view class="name">
+								shadiao
+							</view>
+							<view class="collageNUM">
+								17小时前
+							</view>
+						</view>
+					</view>
+					<view class="item-right" v-if="join">
+						<text >1人查看</text>
+						<view class="transformborder">
+							
+						</view>
+						<text>1人参与</text>
+					</view>
+				</view>
+				<view class="item-bottom">
+					<view class="activeName">
+						<view class="name">
+							团团围住
+						</view>
+						<view class="shareBtn">
+							<text class="Wxicon icon-weixin"></text><text>分享</text>
+						</view>
+					</view>
+					<view class="amount">
+						￥<text >0.01</text>
+					</view>
+					
+					<view class="activeStatus">
+						<view class="status">
+							正在跟团中
+						</view>
+						<text class="more icon-gengduo" bindtap="showAction"></text>
+					</view>
+				</view>
+			</view>
+	</view>

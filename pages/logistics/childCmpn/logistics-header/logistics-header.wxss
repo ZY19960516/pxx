@@ -1,0 +1,23 @@
+/* pages/logistics/childCmpn/logistics-header/logistics-header.wxss */
+
+.header {
+    margin: 0 32rpx;
+    /* padding: 30rpx 0; */
+    background-color: #fff;
+    border-bottom: 2rpx solid #F2F4F7;
+}
+
+.header-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80rpx;
+}
+.header-title {
+    color: #242629;
+    font-size: 28rpx;
+}
+.header-select-image {
+    width: 30rpx;
+    height: 30rpx;
+}

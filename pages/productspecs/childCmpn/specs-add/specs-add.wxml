@@ -1,0 +1,4 @@
+<!--pages/productspecs/childCmpn/specs-add/specs-add.wxml-->
+<view class="add-wraper" bindtap="addSpecs">
+    <text class="title">＋ 添加规格{{num}}</text>
+</view>

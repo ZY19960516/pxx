@@ -1,0 +1,6 @@
+<!--components/product-input/product-input.wxml-->
+
+<view class="product-wraper">
+	<text class="input-name">{{title}}</text>
+	<input class="input {{textAlignRight ? 'input-right' : ''}}" type="{{inputType}}" placeholder="{{placeholder}}" placeholder-style="color:#bfbfbf" disabled="{{disabled}}" value="{{value}}" bindblur="onFinished" bindinput="onInPut"/>
+</view>

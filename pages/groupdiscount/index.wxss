@@ -1,0 +1,6 @@
+/* pages/groupdiscount/index.wxss */
+
+.content-wraper {
+    margin: 20rpx 32rpx;
+}
+

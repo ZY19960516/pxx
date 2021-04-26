@@ -1,0 +1,20 @@
+<!--pages/creategroup/childCmpn/group-start-price/group-start-price.wxml-->
+<alert-center-box show="{{showAlert}}" bindcancel="onSelectCancel" bindconfirm="onSelectConfirm">
+    <view class="content">
+        <view class="title">设置起购金额</view>
+        <view class="input-wraper">
+            <text class="input-title">起购金额:</text>
+            <input class="input" maxlength="10" type="number" placeholder="请输入起购金额" placeholder-class="placeholder" value="{{startPrice}}" bindblur="onfinisehd"/>
+            <text class="input-title">元</text>
+        </view>
+        <view class="select-condition-wraper ">
+            <view class="condition">起购条件:</view>
+            <block wx:for="{{conditions}}" wx:key="index">
+                <view class="select-wraper" bindtap="onSelectCondition" data-index="{{index}}">
+                    <image class="select-image" src="/assets/images/group/{{selectIndex == index ? 'pro_lib_select.png' : 'pro_lib_unselect.png'}} " />
+                    <text class="condition-title">{{item}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+</alert-center-box>

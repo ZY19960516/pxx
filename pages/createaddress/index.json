@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "address-input": "./childCmpn/address-input/address-input"
+  }
+}

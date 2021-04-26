@@ -1,0 +1,9 @@
+<!--pages/productspecs/childCmpn/productspecs/productspecs.wxml-->
+<view class="specs-wraper">
+    <view class="header">
+        <view class="specs-tag">规格{{index}}</view>
+        <image bindtap="onDelete" class="delete-specs" src="/assets/images/group/delete_specs.png" /> 
+    </view>
+    <product-input title="规格标题:" bindonFinished="titleFinished" inputType="text" value="{{specsTitle}}" placeholder="请输入标题，如（颜色）"/>
+    <specs-detail-title specsDetails="{{details}}" bindchange="onDetailSpec"/>
+</view>

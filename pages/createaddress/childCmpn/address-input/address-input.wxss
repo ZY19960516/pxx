@@ -1,0 +1,28 @@
+/* pages/createaddress/address-input/address-input.wxss */
+.input-wraper {
+    min-height: 48rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 2rpx solid #F2F4F7;
+    padding: 20rpx;
+}
+.input-title {
+    color: #242629;
+    font-size: 28rpx;
+    width: 30%;
+}
+
+.picker {
+    flex: 1;
+}
+
+.input-content {
+    flex: 1;
+    color: #242629;
+    font-size: 28rpx;
+}
+
+.input-placeholder {
+    color: #bfbfbf;
+    font-size: 28rpx;
+}

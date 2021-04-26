@@ -1,0 +1,59 @@
+<!-- components/group-list/group-list.wxml -->
+<view class="list-box" wx:if="{{hasResp}}">
+    <block wx:for="{{list}}" wx:key="index">
+        <view class="item-content" mark:myMark="{{item}}" bindtap="intoDetail">
+            <!-- 团信息 -->
+            <view class="item-group-name">
+                <image class="item-group-icon" lazy-load="true" mode="aspectFill" src="{{item.groupUserHeader}}" mark:myMark="{{item}}" catchtap="intoCaptain"></image>
+                <view>
+                    <text class="text-black">{{item.groupUserName}}</text>
+                    <view class="item-num">
+                        <text>{{item.releaseTime}}</text>
+                        <view class="v-line" />
+                        <text>{{item.seeNum}}人查看</text>
+                        <view class="v-line" />
+                        <text>{{item.participateNum}}次参与</text>
+                    </view>
+                </view>
+            </view>
+            <text class="text-title">{{item.groupTittle}}</text>
+            <wxc-price class='goods-price' icon='sub' value='{{item.startingAmount}}'></wxc-price>
+            <!-- 图片 -->
+            <view class="item-img-contaier">
+                <view wx:for="{{item.imgList}}" wx:key="key1" wx:for-item="img" wx:for-index="index">
+                    <image class="item-img" lazy-load="true" mode="aspectFit" src="{{img}}"></image>
+                </view>
+            </view>
+            <!-- 团成员 -->
+            <block wx:for="{{item.participate}}" wx:key="index" wx:for-item="member">
+                <view class="item-members-contaier">
+                    <text>{{item.participate.length-index}}</text>
+                    <image class="member-img" lazy-load="true" mode="aspectFill" src="{{member.userHeader}}"></image>
+                    <text class="member-name">{{member.userName}}</text>
+                    <text>{{member.buyTime}}</text>
+                    <text class="member-r">{{member.orderProducts[0].proName}}</text>
+                    <text wx:if="{{member.orderProducts[0].rules}}">({{member.orderProducts[0].rules}})</text>
+                    <text class="member-num" wx:if="{{member.num>0}}">+{{member.num}}件</text>
+                </view>
+            </block>
+            <!-- 状态、分享 -->
+            <view class="item-members-contaier">
+                <text class="{{item.groupStatus==1?'status-normal':'status-end'}}">
+                    {{item.groupStatus==1?'正在跟团中':item.groupStatus==0?'未开始':'已结束'}}
+                </text>
+                <view class="s_share">
+                    <button class="iconfont icon-icon- share" catchtap="share" open-type='share' data-item='{{item}}'>
+                        分享
+                    </button>
+                    <view class="share">
+                        <image class="share-icon " lazy-load="true" mode="aspectFill" src="/assets/images/ic_wx.png"></image>
+                        <text mark:myMark="{{item}}">分享</text>
+                    </view>
+                </view>
+                <text class="more icon-gengduo" catchtap="showAction" wx:if="{{curLoginUserId==item.userId}}" data-id="{{item.id}}" data-groupStatus="{{item.groupStatus}}"></text>
+            </view>
+        </view>
+    </block>
+    <view slot="after" class="footer" wx:if="{{nomore && list.length>0}}">没有更多了...</view>
+    <no-data wx:if="{{!list||list.length==0}}" message='{{noDataMsg}}' showBtn='{{showNoDataBtn}}' btnText='{{noDataBtnMsg}}'></no-data>
+</view>

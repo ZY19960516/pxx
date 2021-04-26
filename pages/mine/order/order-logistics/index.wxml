@@ -1,0 +1,11 @@
+<view class="wraper">
+	<view class="logsLeft">
+		<text class="iconfont icon-huoche"></text>
+		<text class="logisticsIcon logisticsNumber">{{logisticsNumber}}</text>
+		<text class="logisticsNumber">{{logisticsName}}</text>
+		<text  wx:if="{{showEdit}}" class="iconfont icon-bianji1 logisticsIcon" bindtap="editLogistics"></text>
+	</view>
+	<view class="logsRight" bindtap="onSelectCopyNumber">
+		点击复制
+	</view>
+</view>

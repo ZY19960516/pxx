@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商品库",
+  "usingComponents": {
+    "product-add-button": "./components/product-add-button/product-add-button",
+    "product-add-left": "./components/product-add-left/product-add-left",
+    "product-add-right": "./components/product-add-right/product-add-right"
+  }
+}

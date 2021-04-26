@@ -1,0 +1,251 @@
+<!--pages/groupDetail/index.wxml-->
+<view class="root" wx:if="{{res}}">
+	<!-- 头部团长信息 -->
+	<view class="user-card">
+		<view class="u-name">
+			<image class="user-icon" lazy-load="true" mode="aspectFill" src="{{res.groupUserHeader}}"
+				mark:myMark="{{res}}" catchtap="intoCaptain"></image>
+
+			<view class="u-name-text">
+				<text class="text-user">{{res.groupUserName}}</text>
+				<text class="text-status">已订阅</text>
+			</view>
+
+			<view class="share-img">
+				<image wx:if="{{curLoginUserId==res.userId}}" bindtap="edit" class="edit_group icon-bianji1 share-icon"
+					lazy-load="true" mode="aspectFill" />
+
+				<view class="s_share">
+					<button class="share-icon btn_share" open-type='share' data-item='{{res}}' />
+					<image class="share_group icon-icon- share-icon" lazy-load="true" mode="aspectFill" />
+				</view>
+
+			</view>
+		</view>
+	</view>
+
+	<!-- 团详细信息 -->
+	<view class="group_desc">
+		<text class="text-title">{{res.groupTittle}}</text>
+
+		<!-- 时间、状态信息 -->
+		<view class="item-time">
+			<text class="text-gray">{{res.releaseTime}} 发布</text>
+			<view class="v-line" />
+
+			<view class="text-time" wx:if="{{res.groupStatus==0}}">{{res.startTime}} 开始</view>
+			<view class="text-time" wx:elif="{{res.groupStatus==1}}">{{res.endTime}} 结束</view>
+			<view class="text-time" wx:else>已结束</view>
+		</view>
+
+		<block wx:for="{{groupContent}}" wx:key='index' wx:for-item="i">
+
+			<!-- 标签 -->
+			<view wx:if="{{i.type==5}}" class="tag_container tb_margin">
+				<text class="text-tag" wx:for="{{i.value}}" wx:key='index'>{{item}}</text>
+			</view>
+			<!-- 文字 -->
+			<text wx:elif="{{i.type==1}}" class="text-black tb_margin">{{i.value}}</text>
+			<!-- 小图 -->
+			<view wx:elif="{{i.type==2}}" class="img_box tb_margin">
+				<block wx:for="{{i.value}}" wx:key="index" wx:for-index="index">
+					<image class="item-img" lazy-load="true" mode="aspectFit" src="{{item}}" data-item="{{item}}"
+						data-imglist='{{i.value}}' bindtap="previewImage"></image>
+				</block>
+			</view>
+
+			<!-- 大图 -->
+			<image class="tb_margin" wx:elif="{{i.type==3}}" lazy-load="true" mode="widthFix" src="{{i.value}}"
+				data-imglist='{{i.value}}' data-item="{{i.value}}" bindtap="previewImage">
+			</image>
+
+			<!-- 视频 -->
+			<video class="tb_margin" wx:elif="{{i.type==4}}" src="{{i.value}}"></video>
+		</block>
+
+	</view>
+
+	<!-- 团商品列表 -->
+	<view class="goods">
+		<block wx:for="{{goodsList}}" wx:key="index">
+			<view class="goods-item {{item.surplusStock <= 0 || item.limitBuy <= 0?'goods-item-disable':''}}"
+				bindtap="ctrlGoodsAlert" data-item='{{item}}'>
+				<view class="goods-img-container">
+					<image class="goods-img" lazy-load="true" mode="aspectFit" src="{{item.selRuleImg}}" />
+					<text class="goods-cover">剩{{item.surplusStock}}件</text>
+				</view>
+
+				<view class="goods-text">
+					<text class="text-black">{{item.proName}}</text>
+					<text class="goods-desc"
+						wx:if="{{!(item.ruleList[0].item.length>1||item.ruleList[1].item.length>1)}}">{{item.oneRule}}：{{item.selRule1}}
+						{{item.twoRule}}{{item.twoRule?'：':''}}{{item.selRule2}}</text>
+
+					<view class="goods-price-box">
+						<wxc-price class='goods-price' icon='sub' value='{{item.proPrice}}'></wxc-price>
+						<text class="group-num" wx:if="{{item.groupBuyNum}}">{{item.groupBuyNum}}</text>
+					</view>
+					<text class="goods-desc">限购{{item.limitBuy}}</text>
+
+					<view class="counter">
+						<text wx:if="{{item.ruleList[0].item.length>1||item.ruleList[1].item.length>1}}"
+							class="goods_category">选择规格</text>
+						<counter wx:else num='{{item.num?item.num:0}}' limitNum='{{item.limitBuy}}'
+							stock='{{item.surplusStock}}' extraData='{{item}}' bindOnNumResult="OnNumResult" />
+					</view>
+				</view>
+			</view>
+		</block>
+
+		<view bindtap="expandGoods" class="more-goods" wx:if="{{soldOutList&&soldOutList.length>0}}">
+			<text class="more-goods-text">{{isExpand?"收起全部":"有一件商品已售完"}}</text>
+			<image class="more-goods-arrow" mode="aspectFill"
+				src="{{isExpand?'/assets/images/home/ic-up.png':'/assets/images/home/ic-down.png'}}"></image>
+		</view>
+
+	</view>
+
+	<!-- 跟团人列表 -->
+	<view class="member-box" wx:if="{{res.participate&&res.participate.length>0}}">
+		<text class="text-black">跟团记录</text>
+
+		<block wx:for="{{res.participate}}" wx:key="index">
+			<view class="item-members-contaier">
+				<text>{{res.participate.length-index}}</text>
+				<image class="member-img" lazy-load="true" mode="aspectFill" src="{{item.userHeader}}"></image>
+				<text class="member-name">{{item.userName}}</text>
+				<text>{{item.buyTime}}</text>
+				<text class="member-r">{{item.orderProducts[0].proName}}</text>
+				<text wx:if="{{item.orderProducts[0].rules}}">({{item.orderProducts[0].rules}})</text>
+				<text class="member-num" wx:if="{{item.num>0}}">+{{item.num}}件</text>
+			</view>
+		</block>
+	</view>
+
+	<view style="height:200rpx"></view>
+
+	<!-- 底部支付、购物车组件 -->
+	<view class="bottom-box">
+		<view bindtap="introOrder" class="mine-order">
+			<image class="order-img" lazy-load="true" mode="aspectFill" src="/assets/images/home/ic-order.png">
+			</image>
+			<text class="text-gray-order">我的订单</text>
+		</view>
+
+		<view bindtap="ctrlCartAlert" class="cart-box">
+			<view class="mine-order">
+				<image class="order-img" lazy-load="true" mode="aspectFill" src="/assets/images/home/ic-cart.png">
+				</image>
+				<text class="text-gray-order">购物车</text>
+			</view>
+
+			<text class="cart-goods-num">{{totalNum>99?"99+":totalNum}}</text>
+		</view>
+
+
+		<view class="total_limit">
+			<view class="total_price">
+				<text class="text-total">合计：</text>
+				<wxc-price class="goods-price-big" icon="sub" value='{{totalPrice}}' />
+			</view>
+
+			<view class="limit_txt" wx:if="{{res.startingAmount>0&&res.startingAmount>totalPrice}}">
+				起购价￥{{res.startingAmount}}</view>
+		</view>
+
+		<text class="buy" bindtap="buy">跟团购买</text>
+	</view>
+
+</view>
+
+<!-- 购物车弹窗 -->
+<view class="alert" wx:if="{{showCartAlert}}">
+
+	<view class="mask" bindtap="ctrlCartAlert">
+		<image src="/assets/images/home/ic_close.png" />
+	</view>
+
+	<scroll-view scroll-y class="content">
+		<view class="felx_column">
+			<text class="header">已选择{{totalNum}}件商品</text>
+
+			<block wx:for="{{selGoodsList}}" wx:key="key">
+				<view class="goods-item alert_padding">
+					<image class="goods-img" lazy-load="true" mode="aspectFit" src="{{item.selRuleImg}}" />
+					<view class="goods-text">
+						<text class="text-black">{{item.proName}}</text>
+						<text class="goods-desc">{{item.selRule1}}{{item.selRule2?',':''}}{{item.selRule2||''}}</text>
+
+						<view class="counter_box">
+							<wxc-price class='goods-price' icon='sub' value='{{item.proPrice}}' />
+
+							<counter class="counter" num='{{item.num}}' limitNum='{{item.limitBuy}}'
+								stock='{{item.surplusStock}}' extraData='{{item}}' bindOnNumResult="OnNumResult" />
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</scroll-view>
+</view>
+
+<!-- 商品详情弹窗 -->
+<view class="alert" wx:if="{{showGoodsAlert}}" wx:key="index">
+
+	<view class="mask" bindtap="ctrlGoodsAlert">
+		<image src="/assets/images/home/ic_close.png" />
+	</view>
+
+	<scroll-view scroll-y class="content">
+		<view class="felx_column">
+			<view class="goods-item alert_padding">
+				<image class="goods-img" lazy-load="true" mode="aspectFill" src="{{curGoodsDetail.selRuleImg}}" />
+				<view class="goods-text">
+					<text class="text-black">{{curGoodsDetail.proName}}</text>
+					<wxc-price class='goods-price' icon='sub' value='{{curGoodsDetail.proPrice}}' />
+					<text class="goods-desc">库存{{curGoodsDetail.surplusStock}}</text>
+					<text class="text-black goods_sel"
+						wx:if="{{curGoodsDetail.ruleList&&curGoodsDetail.ruleList.length>0}}">已选择：{{curGoodsDetail.selRule1}}{{curGoodsDetail.selRule2?'/':''}}{{curGoodsDetail.selRule2}}</text>
+				</view>
+			</view>
+
+
+			<!-- 规格一 -->
+			<view class="alert_goods_category_c" wx:if="{{curGoodsDetail.ruleList&&curGoodsDetail.ruleList.length>0}}">
+				<text>{{curGoodsDetail.oneRule}}</text>
+
+				<view class="alert_goods_category_box">
+					<text wx:for="{{curGoodsDetail.ruleList[0].item}}" wx:key="index" bindtap="onRuleSel"
+						data-item='{{item}}' data-isrule1="1"
+						class="alert_goods_category {{curGoodsDetail.selRule1==item?'alert_goods_category_sel':''}}">{{item}}</text>
+				</view>
+
+			</view>
+			<!-- 规格二 -->
+			<view class="alert_goods_category_c" wx:if="{{curGoodsDetail.ruleList&&curGoodsDetail.ruleList.length>1}}">
+				<text>{{curGoodsDetail.twoRule}}</text>
+
+				<view class="alert_goods_category_box">
+					<text wx:for="{{curGoodsDetail.ruleList[1].item}}" wx:key="index" bindtap="onRuleSel"
+						data-item='{{item}}'
+						class="alert_goods_category {{curGoodsDetail.selRule2==item?'alert_goods_category_sel':''}}">{{item}}</text>
+				</view>
+			</view>
+
+			<!-- 数量选择 -->
+			<view class="detail_num">
+				<text>数量</text>
+				<counter num='{{curGoodsDetail.num}}' limitNum='{{curGoodsDetail.limitBuy}}'
+					stock='{{curGoodsDetail.surplusStock}}' extraData='{{curGoodsDetail}}'
+					bindOnNumResult="OnNumResult" />
+			</view>
+
+			<text class="detail_text">商品描述</text>
+			<text class="detail_desc">{{curGoodsDetail.describeContext}}</text>
+			<image wx:for="{{curGoodsDetail.proImg}}" wx:key="index" class="detail_img" lazy-load="true"
+				mode="aspectFill" src="{{item}}" data-imglist='{{curGoodsDetail.proImg}}' data-item="{{item}}"
+				bindtap="previewImage" />
+		</view>
+	</scroll-view>
+
+</view>

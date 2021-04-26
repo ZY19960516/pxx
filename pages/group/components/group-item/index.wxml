@@ -1,0 +1,7 @@
+<!--pages/group/components/group-item/index.wxml-->
+<view class="item-wraper">
+    <view class="image-wraper">
+        <image class="image" src="{{image}}"/>
+    </view>
+    <text class="text">{{title}}</text>
+</view>

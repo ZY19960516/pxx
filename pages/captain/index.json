@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wxc-price": "../../components/wxc-price",
+    "group-list": "/components/group-list/group-list"
+  },
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

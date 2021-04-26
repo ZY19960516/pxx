@@ -1,0 +1,42 @@
+/* pages/creategroup/childCmpn/group-tag-tool/group-tag-tool.wxss */
+.tag-wraper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-wraper {
+    padding-top: 20rpx;
+    position: relative;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.tag {
+    font-size: 24rpx;
+    padding: 10rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+}
+
+.delete {
+    width: 34rpx;
+    height: 34rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tag-sel {
+    background-color:#E8FCFF;
+    color: #0FC7E3;
+}
+
+.add-tag {
+    border-radius: 10rpx;
+    font-size: 24rpx;
+    padding: 5rpx 10rpx;
+    border: 2rpx solid #0FC7E3;
+    color: #0FC7E3;
+}

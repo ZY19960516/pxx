@@ -1,0 +1,66 @@
+.select-tag-wraper {
+    padding: 0 32rpx 30rpx;
+}
+
+.select-tag {
+    padding-top: 20rpx;
+    padding-bottom: 10rpx;
+    font-size: 28rpx;
+    color: #242629;
+    font-weight: 400;
+}
+
+.border-top {
+    border-top: 2rpx solid #F2F4F7;
+}
+
+.total-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tag {
+    font-size: 24rpx;
+    padding: 10rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+}
+
+.placeholder {
+    margin-left: 10rpx;
+    font-size: 24rpx;
+    color: #838C9B;
+    font-weight: 300;
+}
+
+.item-wraper {
+    padding-top: 20rpx;
+    position: relative;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.delete {
+    width: 34rpx;
+    height: 34rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.count {
+    color: #0FC7E3;
+}
+
+.tag-ori {
+    color: #50585F;
+    background-color: #F2F8FF;
+}
+
+.tag-sel {
+    background-color:#E8FCFF;
+    color: #0FC7E3;
+}

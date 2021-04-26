@@ -1,0 +1,71 @@
+{
+    "pages": [
+        "pages/home/index",
+        "pages/group/index",
+        "pages/mine/index",
+        "pages/creategroup/index",
+        "pages/productlibrary/index",
+        "pages/addproduct/index",
+        "pages/productspecs/index",
+        "pages/logistics/index",
+        "pages/createaddress/index",
+        "pages/address/index",
+        "pages/groupdiscount/index",
+        "pages/groupDetail/index",
+        "pages/captain/index",
+        "pages/login/index",
+        "pages/productspecsdetail/index",
+        "pages/setting/index",
+        "pages/mine/Withdrawal/index",
+        "pages/mine/wallet/index",
+        "pages/mine/withdrawalRecordList/index",
+        "pages/mine/BillingDetails/index",
+        "pages/goodsPrePay/index",
+        "pages/mine/Verification/index",
+        "pages/mine/order/index",
+        "pages/mine/order/logisticsInfo/index",
+        "pages/mine/order/updateOrderAddress/index",
+        "pages/mine/IncomeDetails/index",
+        "pages/copyGroup/index",
+        "pages/mine/leagueMember/index",
+        "pages/mine/wuLiu/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "立省多",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#9EA9BB",
+        "selectedColor": "#0FC7E3",
+        "backgroundColor": "white",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "text": "首页",
+                "iconPath": "/assets/images/tab/tab_home_normal.png",
+                "selectedIconPath": "/assets/images/tab/tab_home_select.png"
+            },
+            {
+                "pagePath": "pages/group/index",
+                "text": "开团",
+                "iconPath": "/assets/images/tab/tab_tuan_normal.png",
+                "selectedIconPath": "/assets/images/tab/tab_tuan_select.png"
+            },
+            {
+                "pagePath": "pages/mine/index",
+                "text": "我的",
+                "iconPath": "/assets/images/tab/tab_mine_normal.png",
+                "selectedIconPath": "/assets/images/tab/tab_mine_select.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "您的位置信息将用于主页展示地址"
+        }
+    },
+    "sitemapLocation": "sitemap.json"
+}

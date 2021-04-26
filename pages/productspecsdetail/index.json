@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "具体规格设置",
+  "usingComponents": {
+    "product-specs-detail": "./childCmpn/product-specs-detail/product-specs-detail",
+    "footer-add-button": "/components/footer-add-button/footer-add-button"
+  }
+}

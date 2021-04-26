@@ -1,0 +1,23 @@
+/* components/time-picker/time-picker.wxss */
+.picker {
+    width: 100%;
+}
+
+.show-time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text-align {
+    font-size: 24rpx;
+    color: #242629;
+    min-height: 80rpx;
+    line-height: 80rpx;
+}
+
+.more-image {
+    width: 13rpx;
+    height: 22rpx;
+    margin-left: 10rpx;
+}

@@ -1,0 +1,164 @@
+
+.wraper {
+    /* background: #f8f8f8; */
+    overflow: hidden;
+}
+.info {
+    background: #fff;
+    padding: 0 24rpx;
+    margin-bottom: 20rpx;
+}
+.infoHeader {
+    width: 100%;
+    height: 120rpx;
+    border-bottom: 1px solid #f4f4f4;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.leftBox {
+    width: 70%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.rightBox {
+    width: 20%;
+    margin-right: -30rpx;
+    background: #ffE0d2;
+    color: #ff6722;
+    text-align: center;
+    border-radius: 15rpx 0px 0px 15rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+}
+.boxNum {
+    columns: gray;
+    font-weight: bold;
+    width: 60rpx;
+    text-align: left;
+}
+.wxinfo {
+    overflow: hidden;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.wxName {
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+    flex: 1 0 auto;
+    margin-left: 20rpx;
+}
+.activityBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120rpx;
+    border-bottom: 1px solid #f4f4f4;
+}
+.shopInfo {
+    /* width: 100%; */
+    border-bottom: 1px soild #f4f4f4;
+    background: #f4f4f4;
+    padding: 0 15rpx;
+}
+.shopList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+}
+.buyNum {
+    font-weight: bold;
+}
+.activityTitle{
+    flex: 1;
+    color: #333333;
+}
+.activityDetails {
+    flex: 1;
+    color: #07c160;
+    text-align: right;
+}
+.verificationNum {
+    text-align: right;
+    color: gray;
+}
+.icon-tubiao- {
+    color: gray;
+    font-size: 40rpx;
+}
+.verificationBox {
+    display: flex;
+    justify-content: space-between;
+    height: 140rpx;
+    align-items: center;
+}
+.shopNamebox {
+    display: flex;
+    flex-direction: column;
+}
+.goods-counter-box {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.goods-counter-img {
+    height: 80rpx;
+    width: 80rpx;
+    display: block;
+}
+.buyNum {
+    font-weight: bold;
+}
+.icon-unselected,
+.icon-2weixuanzhong {
+    width: 38rpx;
+    height: 38rpx;
+}
+.icon-2weixuanzhong  {
+    color: #07c160;
+}
+.shopAmount,
+.shopTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+}
+.amout {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+.money {
+    font-weight: bold;
+}
+.addLogistics {
+    font-size: 26rpx;
+    text-align: center;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    vertical-align: middle;
+}
+.noData {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    height: 280rpx;
+    display: flex;
+    flex-direction: column;
+}
+.icon-meiyoudingdan {
+    font-size: 200rpx;
+}
+

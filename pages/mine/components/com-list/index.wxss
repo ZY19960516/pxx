@@ -1,0 +1,119 @@
+.wraper {
+    border-radius: 16rpx;
+    border-top: 1px solid #e4e4e4;
+    /* margin-top: 80rpx; */
+}
+.headerBox {
+    width: 100%;
+}
+.header {
+    display: flex;
+    flex-flow: column;
+    background: #ebebeb;
+    color: #333333;
+    font-size: 28rpx;
+    padding: 20rpx;
+}
+.iconfont {
+    font-family: "iconfont";
+    font-size: 60rpx;
+    text-align: center;
+    flex: 1;
+}
+.iconColorget {
+    color: #589dff;
+}
+.iconColorsend {
+    color: #ff930e;
+}
+image {
+    /* flex: 1; */
+    height: 100rpx;
+    width: 100rpx;
+    margin-right: 20rpx;
+}
+.listBox {
+    display: flex;
+    justify-content: flex-start;
+    background: #ffffff;
+    color: #333333;
+    font-size: 28rpx;
+    padding: 20rpx;
+    align-items: center;
+    height: 120rpx;
+    border-bottom: 1px solid #f4f4f4;
+}
+.amount {
+    flex: 1;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: right;
+    color: red;
+}
+.centerBox {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 75%;
+}
+.centerBox text {
+    line-height: 60rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+.money {
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #ebebeb;
+    color: #878889;
+}
+.money>text:last-child {
+    margin-left: 20rpx;
+}
+.more {
+    color: #454545;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    margin: auto;
+    text-align: center;
+}
+.nomore {
+    text-align: center;
+    position: absolute;
+    height: 60rpx;
+    line-height: 60rpx;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 100%;
+    color: #454545;
+    font-size: 26rpx;
+}
+.noData {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+.noData {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    height: 280rpx;
+}
+.icon-meiyoudingdan {
+    font-size: 200rpx;
+}

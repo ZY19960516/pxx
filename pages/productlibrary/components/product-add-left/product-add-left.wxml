@@ -1,0 +1,4 @@
+<!--pages/productlibrary/childs/product-add-left/product-add-left.wxml-->
+<block wx:for="{{categorys}}" wx:key="index">
+    <view class="item {{selectIndex == index ? 'select' : ''}}" bindtap="selectItem" data-index="{{index}}">{{item.categoryName}}</view>
+</block>

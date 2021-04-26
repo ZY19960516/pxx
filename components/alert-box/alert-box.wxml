@@ -1,0 +1,11 @@
+<!--components/alert-box/alert-box.wxml-->
+<view wx:if="{{show}}" class="tag-alert-wraper">
+	<view class="content">
+		<view class="content-header">
+			<view class="header-item header-cancel" bindtap="onClose">取消</view>
+			<view class="title">{{title}}</view>
+			<view class="header-item header-ok" bindtap="onConfirm">确认</view>
+		</view>
+		<slot></slot>
+	</view>
+</view>

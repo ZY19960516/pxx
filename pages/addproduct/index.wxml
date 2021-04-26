@@ -1,0 +1,84 @@
+<!--pages/addproduct/index.wxml-->
+<!-- 名称 -->
+<view class="wraper">
+    <!-- 商品名称 -->
+    <product-input
+        title="商品名称" 
+        inputType="text" 
+        value="{{name}}" 
+        placeholder="请输入商品名称（必填）" 
+        bindonInPut="onNameFinished"
+    />
+
+    <!-- 规格 -->
+    <product-specs-input 
+        name="商品规格"
+        bindadd="onSelectGuige" 
+        firstSpecs="{{specs}}"
+        secondSpecs="{{secondSpecs}}"
+    />
+
+    <!-- 商品价格 -->
+    <product-specs-input
+        wx:if="{{price}}"
+        name="商品价格(￥)" 
+        firstSpecs="{{price}}" 
+        bindadd="onSpecsDetial"
+    />
+   
+    <!-- 商品库存  -->
+    <product-specs-input
+        wx:if="{{stock}}"
+        name="商品库存"  
+        bindadd="onSpecsDetial"
+        firstSpecs="{{stockStr}}"
+    />
+    <!-- 划线价格  -->
+    <product-input 
+        title="划线价格(￥)" 
+        inputType="digit" 
+        value="{{oldPrice}}" 
+        placeholder="请输入划线价格" 
+        bindonInPut="onOldPriceFinished"
+    />
+  
+    <!-- 商品标签 -->
+    <product-select 
+        title="商品标签" 
+        bindonSelect="onSelectTags" 
+        placeholder="点击添加标签会有效提升购买" 
+        selectValue="{{tagStr}}"
+    />
+    
+     <!-- 商品分类 -->
+    <product-select 
+        title="商品分类" 
+        isPicker="{{true}}" 
+        rangeKey="categoryName"
+        bindonSelectChange="pickerChanged" 
+        placeholder="点击选择商品分类" 
+        selectSource="{{categorys}}" 
+        selectIndex="{{categoryIndex}}" 
+        selectValue="{{categoryTitle}}"
+    />
+  
+    <!-- 商品描述 -->
+    <product-textarea 
+        title="商品描述" 
+        placeholder="请输入商品描述" 
+        maxlength="1000" 
+        bindonFinsehd="onFinshedDes"
+        value="{{proDes}}"
+    />
+
+    <add-product-image  
+        images="{{productImgs}}"
+        bindimgpath="onSelectImage"
+        binddelete="onDeleteImage"
+    />
+</view>
+<!-- 底部添加按钮 -->
+<footer-add-button title="完成" bindonSelect="onSelectAdd"/>
+
+
+<product-tag-alert show="{{showTag}}" selectTags="{{tagSource}}" selectCount="2" bindonClose="closeAlert" bindonConfirm="finishedSelectTags"/>

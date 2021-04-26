@@ -1,0 +1,16 @@
+<!--订单管理-->
+<view class="content">
+    <mp-searchbar  search="{{search}}" ext-class="search_bar" placeholder='搜索订单号、手机号、商品名称' bindclear='clearSearch' cancel="" throttle='10'/>
+    <view class="selectDateBox">
+        <block wx:key='index' wx:for="{{typeArray}}">
+            <text class="{{typeIndex == index ? 'activeText bottomLine' : 'textNamol'}}"  data-index="{{index}}" bindtap="selectType" data-item="{{item}}">{{item}}</text>
+        </block>
+    </view>
+    <!-- 我发起得团 -->
+    <order-item list="{{list}}" wx:if="{{typeIndex == 0}}"/>
+    <!-- 我的跟团 -->
+    <orderflo-item followList="{{followList}}" wx:else/>
+    <view class="nomore">
+		没有更多了~
+	</view>
+</view>

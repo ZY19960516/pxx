@@ -1,0 +1,64 @@
+/* pages/creategroup/childCmpn/group-start-price/group-start-price.wxss */
+.content {
+    padding-bottom: 20rpx;
+}
+
+
+.title {
+    padding: 32rpx;
+    color: #242629;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.input-wraper {
+    margin: 0 64rpx;
+    display: flex;
+    align-items: center;
+    height: 80rpx;
+    border-bottom: 2rpx solid #F2F4F7;
+}
+
+.input-title {
+    padding-right: 20rpx;
+    font-size: 28rpx;
+    color: #242629;
+}
+
+.input {
+    flex: 1;
+    font-size: 34rpx;
+    color: #242629;
+    height: 100%;
+}
+
+.placeholder {
+    color: #bfbfbf;
+    font-size: 30rpx;
+}
+
+.select-condition-wraper {
+    margin: 0 64rpx;
+}
+
+.select-wraper {
+    display: flex;
+    align-items: center;
+    padding: 0 32rpx 20rpx;
+}
+
+.condition {
+    padding: 20rpx 0;
+    font-size: 28rpx;
+    color: #242629;
+}
+
+.condition-title {
+    margin-left: 20rpx;
+    color: #242629;
+    font-size: 28rpx;
+}
+.select-image {
+    width: 30rpx;
+    height: 30rpx;
+}

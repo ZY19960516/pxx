@@ -1,0 +1,88 @@
+/* pages/creategroup/index.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background-color: #F4F6F9;
+}
+.content {
+    position: relative;
+    padding-bottom: 150rpx;
+}
+
+.bg {
+    height: 200rpx;
+    background:linear-gradient(#0FC7E3,#F4F6F9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -100;
+}
+
+.section-wraper {
+    margin: 0rpx 32rpx 20rpx;
+    border-radius: 16rpx;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #242629;
+    font-weight: 500;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: left;
+    padding: 20rpx 32rpx;
+}
+
+.input {
+    height: 88rpx;
+    font-size: 26rpx;
+    color: #242629;
+    margin:0 32rpx;
+    border-bottom: 2rpx solid #F2F4F7;
+}
+
+.input-placeholder {
+    color: #bfbfbf;
+}
+
+.editor {
+    font-size: 26rpx;
+    color: #242629;
+    margin:0 32rpx;
+    min-height: 88rpx !important;
+}
+
+/* 团购商品 */
+
+.import-product {
+    padding: 20rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text {
+    font-size: 26rpx;
+    color: #0FC7E3;
+    border: 2rpx solid #0FC7E3;
+    width: 300rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+
+/* 团购设置 */
+
+.group-seting {
+    padding: 0 32rpx;
+}
+
+/* .goup-product-wraper {
+    margin: 0rpx 32rpx;
+    border-radius: 16rpx;
+    background-color: #fff;
+} */

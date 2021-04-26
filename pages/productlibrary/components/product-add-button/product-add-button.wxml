@@ -1,0 +1,5 @@
+<!--pages/productlibrary/childs/product-add-button/product-add-button.wxml-->
+<view class="product-add" bindtap="onSelect">
+    <image class="add-image" src="/assets/images/group/product_add.png" />
+    <text class="add-text">添加商品</text>
+</view>

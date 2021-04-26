@@ -1,0 +1,13 @@
+<!--pages/productspecs/childCmpn/specs-detail-title/specs-detail-title.wxml-->
+<view class="detial-wraper">
+    <view class="title">具体规格</view>
+    <view class="right">
+        <block wx:for="{{specsDetails}}" wx:key="index">
+            <view class="input-wraper">
+                <input class="input" bindblur="onFinisehd" value="{{item}}" data-index="{{index}}" placeholder-class="input-placeholder" placeholder="请输入具体规格属性，如“白色”"/>
+                <view class="clear" bindtap="deleteSpec" data-index="{{index}}">×</view>
+            </view>
+        </block>
+        <view class="add-specs-detail" bindtap="addSpecs">＋ 添加具体规格</view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/creategroup/childCmpn/group-time/group-time.wxml-->
+<view class="time-wraper">
+    <view class="time-name item">团购时间</view>
+    <view class="right">
+        <time-picker class="bottom" range="{{range}}" showTime="开始：{{startTime}}" selectIndexs="{{startIndexs}}" bindchanged="onStartChanged"/>
+        <view class="line"></view>
+        <time-picker showTime="结束：{{endTime}}" range="{{range}}" selectIndexs="{{endIndexs}}" bindchanged="onEndChanged"/>
+    </view>
+</view>

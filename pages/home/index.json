@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#F0F0F0",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "mp-searchbar": "../../weui/components/searchbar/searchbar",
+    "group-list": "/components/group-list/group-list"
+  }
+}

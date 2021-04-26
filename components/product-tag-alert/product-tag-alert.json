@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "alert-box": "/components/alert-box/alert-box"
+    }
+}

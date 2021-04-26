@@ -1,0 +1,65 @@
+/* pages/group/index.wxss */
+page{
+    background-color:  #F0F0F0;
+}
+
+.group-wraper {
+    height: 100%;
+    width: 100%;
+}
+
+.group-title-wraper {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF6F8;
+    padding: 32rpx;
+    color: rgba(250, 73, 106, 0.8);
+    font-size: 24rpx;
+}
+
+.group-title-introduce {
+    font-size: 26rpx;
+    margin-bottom: 15rpx;
+}
+
+.item-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90rpx;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+}
+
+.creae-bg {
+    background-color: #0FC7E3;
+    color: #fff;
+}
+
+.copy-color {
+    border: 2rpx solid #0FC7E3;  
+    color: #0FC7E3;
+}
+
+
+.normal-wraper {
+    padding: 40rpx 32rpx;
+    background-color: #fff;
+}
+
+.normal-wraper:last-of-type {
+    margin-top: 20rpx;
+}
+
+.step-title {
+    color: #343434;
+    font-size: 28rpx;
+}
+
+.group-step-wraper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 32rpx 20rpx;
+}

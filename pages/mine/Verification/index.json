@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品核销",
+  "usingComponents": {
+    "verification-list": "./verification-list/index"
+  }
+}

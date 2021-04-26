@@ -1,0 +1,18 @@
+/* pages/productlibrary/components/check-box/check-box.wxss */
+
+.check-box {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    color: #8a8a8a;
+    font-size: 22rpx;
+    margin-left: 5rpx; 
+}
+
+.select-image {
+    width: 30rpx;
+    height: 30rpx;
+    padding: 5rpx;
+}

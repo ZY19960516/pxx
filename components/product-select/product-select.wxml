@@ -1,0 +1,30 @@
+<!--components/product-select/product-select.wxml-->
+<view class="product-wraper">
+    <text class="input-name">{{title}}</text>
+    <block wx:if="{{isPicker}}">
+        <picker style="flex:1;" range="{{selectSource}}" range-key="{{rangeKey}}" value="{{selectIndex}}" bindchange="onSelectChange">
+            <view class="select-content value {{textAlignRight ? 'input-right': ''}}" wx:if="{{selectValue}}">{{selectValue}}</view>
+            <view wx:else class="select-content palceholder {{textAlignRight ? 'input-right': ''}}">{{placeholder}}</view>
+        </picker>
+        <image class="more-image" src="/assets/images/group/select_more.png" />
+    </block>
+    <block wx:else >
+        <view class="select-content value {{textAlignRight ? 'input-right': ''}}" wx:if="{{selectValue}}" bindtap="onSelect">{{selectValue}}</view>
+        <view wx:else class="select-content palceholder {{textAlignRight ? 'input-right': ''}}" bindtap="onSelect">{{placeholder}}</view>
+        <image class="more-image" src="/assets/images/group/select_more.png" />
+    </block>
+</view>
+
+<!-- 
+<view wx:if="{{isPicker}}" class="slect-right">
+        <picker style="flex:1;" range="{{selectSource}}" value="{{selectIndex}}">
+            <view class="select-content value" wx:if="{{value}}" bindtap="onSelect">{{value}}</view>
+            <view wx:else="{{value}}" class="select-content palceholder" bindtap="onSelect">{{placeholder}}</view>
+        </picker>
+        <image class="more-image" src="/assets/images/group/select_more.png" />
+    </view>
+    <view wx:else class="slect-right">
+        <view class="select-content value" wx:if="{{value}}" bindtap="onSelect">{{value}}</view>
+        <view wx:else="{{value}}" class="select-content palceholder" bindtap="onSelect">{{placeholder}}</view>
+        <image class="more-image" src="/assets/images/group/select_more.png" />
+    </view> -->

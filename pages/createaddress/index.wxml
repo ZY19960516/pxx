@@ -1,0 +1,23 @@
+<!--pages/createaddress/index.wxml-->
+<view class="wraper">
+    <!-- 提货点简称 -->
+    <address-input wx:if="{{addrType==2}}" title="提货点名称" value="{{business}}" placeholder="请输入提货点名称" bindfinishedInput="onBusinessFinished"/>
+
+    <!-- 提货点联系人 -->
+    <address-input title="{{addrType==1?'联系人':'提货点联系人'}}" value="{{userName}}" placeholder="请输入联系人" bindfinishedInput="onUserNameFinished"/>
+
+    <!-- 提货点电话 -->
+    <address-input title="{{addrType==1?'联系电话':'提货点电话'}}" value="{{userPhone}}" inputType="number" placeholder="请输入电话" bindfinishedInput="onPhoneFinished" maxLength='11'/>
+  
+    <!-- 提货点位置 -->
+    <address-input title="{{addrType==1?'位置':'提货点位置'}}" type="{{3}}" value="{{region}}" placeholder="请选择位置" bindfinishedRegion="onFinisehdRegion"/>
+
+    <!-- 详细地址 -->
+    <address-input title="详细地址" type="{{2}}" value="{{address}}" placeholder="请输入详细地址" bindfinishedInput="onAddressFinished"/>
+    
+</view>
+<!-- 底部按钮 -->
+<view class="footer" bindtap="onSelectAdd">确认</view>
+
+
+

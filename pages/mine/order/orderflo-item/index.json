@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": { 
+        "logistics": "../../components/logistics/logistics",
+        "order-logistics": "../order-logistics"
+    }
+}

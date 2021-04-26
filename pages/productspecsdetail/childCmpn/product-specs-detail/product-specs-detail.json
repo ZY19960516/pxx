@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "product-input": "/components/product-input/product-input"
+    }
+}

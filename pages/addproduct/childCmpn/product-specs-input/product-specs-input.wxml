@@ -1,0 +1,11 @@
+<!--pages/addproduct/childCmpn/product-specs-input/product-specs-input.wxml-->
+<view class="specs-input-warper">
+    <view class="specs-name">{{name}}</view>
+    <view class="right">
+        <view class="specs">
+            <view class="add-specs {{firstSpecs ? 'color' : 'placeholder'}}" bindtap="addSpecs">{{firstSpecs ? firstSpecs : '设置规格'}}</view>
+            <view wx:if="{{secondSpecs}}" class="add-specs color">{{secondSpecs}}</view>
+        </view>
+        <image class="more-image" src="/assets/images/group/select_more.png" />
+    </view>
+</view>

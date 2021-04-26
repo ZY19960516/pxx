@@ -1,0 +1,6 @@
+<!--components/no-data/no-data.wxml-->
+<view class="wraper">
+    <image class="image" src="/assets/images/group-step/no-data.png"/>
+    <view class="alert">{{message}}</view>
+    <view class="btn" wx:if="{{showBtn}}" bindtap="onSelectCreateGroup">{{btnText}}</view>
+</view>

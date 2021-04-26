@@ -1,0 +1,7 @@
+<!--pages/creategroup/childCmpn/input-tool/input-tool.wxml-->
+<top-tool-bar title="文字" bindmoveUp="noMoveUp" bindmoveDwon="onMoveDwon" binddelete="onDelete" upEnable="{{upEnable}}" dwonEnable="{{dwonEnable}}">
+	<view class="wraper">
+		<textarea class="textarea" value="{{value}}" auto-height placeholder="请输入团购活动内容" placeholder-class="placeholder" bindinput="onFinished" />
+	</view>
+</top-tool-bar>
+

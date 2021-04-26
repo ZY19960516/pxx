@@ -1,0 +1,17 @@
+<!--pages/productspecs/childCmpn/product-specs-detail/product-specs-detail.wxml-->
+<view class="specs-detail-wraper">
+	<view class="specs-tag">{{current}}/{{total}}</view>
+	<view class="content">
+		<product-input title="{{source.specsTitle1}}:" disabled="{{true}}" value="{{source.specs1Value}}" />
+		<product-input wx:if="{{source.specsTitle2}}" title="{{source.specsTitle2}}:" disabled="{{true}}" value="{{source.specs2Value}}" />
+		<product-input title="价格:" inputType="digit" placeholder="请输入该规格的价格" bindonInPut="onFinishedPrice" value="{{source.specsPrice}}"/>
+		<product-input title="库存:" inputType="number" placeholder="请输入该规格的库存" bindonFinished="onStock" value="{{source.stock}}"/>
+		<view class="cover-image-wraper">
+			<view class="title">规格图片:</view>
+			<view class="image-wraper">
+				<image class="select-image" bindtap="selectCoverImg" mode="aspectFit" src="{{source.image || selectImage}}" />
+				<image wx:if="{{source.image}}" class="delete" bindtap="onDeleteImage" src="/assets/images/group/delete_product_image.png" />
+			</view>
+		</view>
+	</view>
+</view>

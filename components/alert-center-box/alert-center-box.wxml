@@ -1,0 +1,13 @@
+<!--components/alert-center-box/alert-center-box.wxml-->
+<view wx:if="{{show}}" class="tag-alert-wraper" catchtouchmove="move">
+    <view class="content">
+        <slot></slot>
+        <view wx:if="{{isSingleBtn}}" class="single-bottom-btn">
+            <view class="btn ok single-btn" bindtap="onSelectConfirm">{{confirmTitle}}</view>
+        </view>
+        <view wx:else class="bottom-btn">
+            <view class="btn cancel" bindtap="onSelectCaancel">{{cancelTitle}}</view>
+            <view class="btn ok" bindtap="onSelectConfirm">{{confirmTitle}}</view>
+        </view>
+    </view>
+</view>

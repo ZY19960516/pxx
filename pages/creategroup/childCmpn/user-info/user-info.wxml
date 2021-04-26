@@ -1,0 +1,5 @@
+<!--pages/creategroup/childCmpn/user-info/user-info.wxml-->
+<view wx:if="{{userInfo}}" class="user-wraper">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" />
+    <text class="nickName">{{userInfo.nickName}}</text>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "规格设置",
+  "usingComponents": {
+    "product-specs": "./childCmpn/product-specs/product-specs",
+    "specs-add": "./childCmpn/specs-add/specs-add",
+    "footer-add-button": "/components/footer-add-button/footer-add-button",
+    "alert-center-box": "../../components/alert-center-box/alert-center-box"
+  }
+}

@@ -1,0 +1,49 @@
+/* pages/addproduct/add-product-image/add-product-image.wxss */
+
+.header {
+    font-size: 28rpx;
+    color: #242629;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+}
+
+.header-plc {
+    font-size: 24rpx;
+    color: #BEC5D1;
+}
+
+.image-wraper {
+    width: 600;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.image {
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.image-item-wraper {
+    position: relative;
+    width: 180rpx;
+    height: 180rpx;
+    margin-bottom: 20rpx;
+    margin-right: 20rpx;
+}
+
+.delete {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.select-image {
+    width: 180rpx;
+    height: 180rpx; 
+    margin-bottom: 20rpx;
+}

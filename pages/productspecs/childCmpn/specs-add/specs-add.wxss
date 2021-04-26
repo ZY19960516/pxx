@@ -1,0 +1,19 @@
+/* pages/productspecs/childCmpn/specs-add/specs-add.wxss */
+
+.add-wraper {
+    margin: 30rpx 200rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 10rpx;
+    background-color: #fff;
+    justify-content: center;
+    border: 2rpx solid #0FC7E3;
+}
+
+.title {
+    font-size: 24rpx;
+    color: #0FC7E3;
+    margin-left: 10rpx;
+    font-weight: bold;
+}

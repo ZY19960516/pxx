@@ -1,0 +1,29 @@
+/* pages/group/components/group-item/index.wxss */
+
+.item-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wraper {
+    width: 70rpx;
+    height: 70rpx;
+    background-color: #0FC7E3;
+    border-radius: 35rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.text {
+    margin-top: 16rpx;
+    color: #343434;
+    font-size: 26rpx;
+}

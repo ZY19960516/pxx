@@ -1,0 +1,9 @@
+<!--pages/productspecsdetail/index.wxml-->
+<view class="detial-wraper">
+	<block wx:for="{{sepcsDetails}}" wx:key="index">
+		<product-specs-detail source="{{item}}" bindfinished="finishedInput" data-index="{{index}}" total="{{sepcsDetails.length}}" current="{{index+1}}" />
+	</block>
+</view>
+
+<!-- 底部添加按钮 -->
+<footer-add-button title="完成" bindonSelect="onFinishedAdd" />

@@ -1,0 +1,4 @@
+<!--收入明细-->
+<view class="content">
+    <com-list list="{{list}}" detailsType="IncomeDetails"/>
+</view>

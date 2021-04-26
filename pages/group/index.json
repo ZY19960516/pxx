@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "开团",
+  "usingComponents": {
+    "group-item": "./components/group-item"
+  }
+}
+

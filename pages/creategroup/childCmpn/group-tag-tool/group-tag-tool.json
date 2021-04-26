@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "top-tool-bar": "../top-tool-bar/top-tool-bar",
+        "product-tag-alert": "/components/product-tag-alert/product-tag-alert"
+    }
+}

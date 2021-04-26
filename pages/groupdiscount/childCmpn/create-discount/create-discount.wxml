@@ -1,0 +1,9 @@
+<!--pages/groupdiscount/childCmpn/create-discount/create-discount.wxml-->
+<view class="create-wraper" bindtap="onCreateDiscount">
+	<view class="create-left">＋</view>
+	<view class="create-right">
+		<view class="create-title">创建团购满减优惠</view>
+		<view class="create-sub-title">(已创建{{discounts.length}}/5)</view>
+	</view>
+</view>
+<create-discount-alert showAlert="{{show}}" bindcancel="onselectCancel" bindconfirm="onselectConfirm"/>

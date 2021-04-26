@@ -1,0 +1,44 @@
+/* components/counter/counter.wxss */
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.goods-counter {
+    width: 100rpx;
+    text-align: center;
+    margin-left: 2rpx;
+    margin-right: 2rpx;
+}
+
+.counter .img {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 21rpx;
+}
+
+.img-decrement {
+    width: 54rpx;
+    height: 54rpx;
+    opacity: 1;
+}
+
+
+.img-decrement-disable {
+    width: 54rpx;
+    height: 54rpx;
+    opacity: 0.5;
+}
+
+.img-increment {
+    width: 54rpx;
+    height: 54rpx;
+    opacity: 1;
+}
+
+.img-increment-disable {
+    width: 54rpx;
+    height: 54rpx;
+    opacity: 0.5;
+}

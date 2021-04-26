@@ -1,0 +1,71 @@
+/* pages/mine/index.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #F4F6F9;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+.content {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding-bottom: 160rpx;
+}
+.iconfont {
+  font-family: "iconfont";
+  font-size: 30rpx;
+  text-align: center;
+  z-index: 1;
+}
+.selectDateBox {
+  font-size: 28rpx;
+  color: #878889;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background: #ffffff;
+  position: relative;
+}
+.textNamol{
+  color: #333333;
+}
+  /* margin-left: 40rpx; */
+.activeText {
+  color: #07c160;
+  position: relative;
+}
+.activeText::after {
+  content: '';
+  width: 54rpx;
+  height: 8rpx;
+  position: absolute;
+  bottom: -22rpx;
+  left: 50%;
+  transform: translate(-50%);
+  background: #07c160;
+  border-radius: 4px;
+}
+.verificationBtn {
+  background: #07c160;
+  border-radius: 15rpx 15rpx 0 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+}

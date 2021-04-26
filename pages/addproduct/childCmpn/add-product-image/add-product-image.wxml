@@ -1,0 +1,13 @@
+<!--pages/addproduct/add-product-image/add-product-image.wxml-->
+<view>
+    <view class="header">商品图片<text class="header-plc">(最多9张)</text></view>
+    <view class="image-wraper">
+        <block wx:for="{{images}}" wx:key="index">
+            <view class="image-item-wraper">
+                <image class="image" src="{{item}}" mode="aspectFit"/>
+                <image class="delete" bindtap="onDelete" data-index="{{index}}" src="/assets/images/group/delete_product_image.png"/>
+            </view>
+        </block>
+        <image wx:if="{{images.length < 9}}" class="select-image" bindtap="onSelect" src="/assets/images/group/select_product_image.png" />
+    </view>
+</view>

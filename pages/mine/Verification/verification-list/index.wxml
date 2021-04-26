@@ -1,0 +1,50 @@
+<view class="wraper" wx:if="{{list.length > 0}}">
+	<view class="info" wx:for="{{list}}" wx:key='index' >
+		<view class="infoHeader">
+			<view class="leftBox">
+				<text class="boxNum">{{index+1}}</text>
+				<view class="wxinfo">
+					<image class="goods-counter-img" lazy-load="true" mode="aspectFill" src="{{item.userHeader}}"></image>
+					<text class="wxName">{{item.userName}}</text>
+				</view>
+			</view>
+			<view class="rightBox">
+				{{item.writeOff == 1 ? '已提货' : '未提货'}}
+			</view>
+		</view>
+		<view class="activityBox">
+			<text class="activityTitle">{{item.groupInfoTittle}}</text>
+			<text class="activityDetails" bindtap="toActiveity" data-groupInfoId = "{{item.groupInfoId}}">查看活动></text>
+		</view>
+		<view class="shopInfo">
+			<text class="verificationNum">本次核销数量</text>
+			<view class="verificationBox" wx:if="{{item.orderProducts && item.orderProducts.length >0}}">
+				<view class="iconfont icon-unselected" bindtap="check" wx:if="{{item.writeOff==0}}" data-verificationno="{{item.orderNo}}">444</view>	
+				<view class="iconfont icon-2weixuanzhong" wx:else></view>
+				<view class="shopNamebox" wx:for="{{item.orderProducts}}" wx:key="idx" wx:for-item="initem">
+					<text class="saleShop">{{initem.proName}} <text class="buyNum">+{{initem.buyNum}}件</text></text>
+				</view>
+			</view>
+			<view class="orderBox">
+				<view class="shopAmount">
+					<text >商品总金额</text>
+					<text >￥{{item.payMoney}}</text>
+				</view>
+				<view class="shopTime"  >
+					<text >{{item.createdAt}}</text>
+					<view class="amout">
+						<text >已团{{item.num}}件</text>
+						<text class="money">合计￥{{item.payMoney}}</text>
+					</view>
+				</view>
+			</view>
+			<logistics receiptAddress="{{item.receiptAddress}}" receiptArea="{{item.receiptArea}}" receiptCity="{{item.receiptCity}}" receiptProvince="{{item.receiptProvince}}" receiptPhone="{{item.receiptPhone.val}}" receiptName="{{item.receiptName.val}}"/>
+		</view>
+	</view>
+</view>
+<view class="noData" wx:else>
+	<view class="nodataBox">
+		<text class="icon-meiyoudingdan iconfont"></text>
+		<text>嘤嘤嘤~暂时没有订单</text>
+	</view>
+</view>

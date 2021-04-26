@@ -1,0 +1,20 @@
+/* pages/creategroup/childCmpn/user-info/user-info.wxss */
+
+.user-wraper {
+    padding: 32rpx;
+    display: flex;
+    align-items: center;
+    background-color: #0FC7E3;
+}
+
+.avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+.nickName {
+    font-size: 28rpx;
+    /* color: #242629; */
+    margin-left: 20rpx;
+    color: #fff;
+}

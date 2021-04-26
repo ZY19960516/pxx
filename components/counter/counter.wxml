@@ -1,0 +1,9 @@
+<!--components/counter/counter.wxml-->
+<view class="counter">
+    <image catchtap="changeNum" class="{{num>minNum?'img-decrement':'img-decrement-disable'}}"
+        src="ic_decrement.png"></image>
+    <input class="goods-counter" maxlength="5" type="number" value="{{num}}" bindblur="bindblur" catchtap="interceptEvent"/>
+    <image mark:myMark="1" catchtap="changeNum"
+        class="img-increment {{(limitNum==0||num<limitNum)&&num<stock?'':'img-increment-disable'}}"
+        src="ic_increment.png"></image>
+</view>

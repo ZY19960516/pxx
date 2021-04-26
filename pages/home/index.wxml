@@ -1,0 +1,6 @@
+<!--pages/home/index.wxml-->
+<view class="home_box">
+    <mp-searchbar wx:if="{{isLogin}}" search="{{search}}" ext-class="search_bar" placeholder='搜索活动标题' bindclear='clearSearch' cancel="" throttle='10'/>
+
+    <group-list isPullFresh='{{isPullFresh}}' isLoadMore='{{isLoadMore}}' keyword='{{keyword}}' class="list"/>
+</view>

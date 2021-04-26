@@ -1,0 +1,148 @@
+<!--pages/creategroup/index.wxml-->
+
+<user-info userInfo="{{userInfo}}"/>
+<view class="content">
+    <view class="bg"></view>
+    <view class="section-wraper">
+        <view class="title">团购介绍</view>
+        <input class="input"  placeholder="请输入团购名称" value="{{groupTittle}}" placeholder-class="input-placeholder" bindblur="onFinishedInput"/>
+        <block wx:for="{{introduces}}" wx:key="index">
+            <!-- 文字类型 -->
+            <group-input-tool 
+                wx:if="{{item.type == 1}}" 
+                value="{{item.value}}"
+                upEnable="{{item.upEnable}}" 
+                dwonEnable="{{item.dwonEnable}}"
+                bindup="onMoveUp"
+                binddown="onMoveDwon"
+                binddelete="onDelete"
+                bindfinished="onTextFinsehd"
+                data-index="{{index}}"
+            />
+            <!-- 小图片类型 -->
+            <group-image-tool 
+                wx:elif="{{item.type == 2}}" 
+                images="{{item.value}}"
+                upEnable="{{item.upEnable}}" 
+                dwonEnable="{{item.dwonEnable}}"
+                bindup="onMoveUp"
+                binddown="onMoveDwon"
+                binddelete="onDelete"
+                bindminFinished="onMinFinished"
+                data-index="{{index}}"
+            />
+            <!-- 大图片类型 -->
+            <group-image-tool 
+                wx:elif="{{item.type == 3}}" 
+                isLarge="{{true}}" 
+                largeImage="{{item.value}}"
+                upEnable="{{item.upEnable}}" 
+                dwonEnable="{{item.dwonEnable}}"
+                bindup="onMoveUp"
+                binddown="onMoveDwon"
+                binddelete="onDelete"
+                bindlargeFinished="onLargeFinished"
+                data-index="{{index}}"
+            />
+            <!-- 视频类型 -->
+            <group-video-tool 
+                wx:elif="{{item.type == 4}}" 
+                videoUrl="{{item.value}}"
+                upEnable="{{item.upEnable}}" 
+                dwonEnable="{{item.dwonEnable}}"
+                bindup="onMoveUp"
+                binddown="onMoveDwon"
+                binddelete="onDelete"
+                bindfinished="onVideoFinished"
+                data-index="{{index}}"
+            />
+            <!-- 标签类型 -->
+            <group-tag-tool 
+                wx:elif="{{item.type == 5}}" 
+                tags="{{item.value}}"
+                upEnable="{{item.upEnable}}" 
+                dwonEnable="{{item.dwonEnable}}"
+                bindup="onMoveUp"
+                binddown="onMoveDwon"
+                binddelete="onDelete" 
+                bindfinished="onTagFinished"
+                data-index="{{index}}"
+            />
+
+        </block>
+        <!-- 添加视频 图片 文字 标签(只能添加一个) -->
+        <group-tool-bar tagEnable="{{tagEnable}}" bindonSelect="groupToolBarSelect"/>
+    </view>
+    <!-- 团购商品 -->
+    <view class="section-wraper">
+        <view class="title">团购商品</view>
+        <block wx:for="{{products}}" wx:key="index">
+            <group-product product="{{item}}" proIndex="{{index+1}}" bindchange="onInputBuyNumber" binddelete="onDeleteSelectProduct" data-index="{{index}}" />
+        </block>
+        <view class="import-product" >
+            <text class="btn-text" bindtap="onAddProduct">＋ 添加商品</text>
+        </view>
+    </view>
+    <!-- 团购设置 -->
+    <view class="section-wraper">
+        <view class="title">团购设置</view>
+        <view class="group-seting">
+            <product-select  
+                title="物流方式" 
+                textAlignRight="{{true}}"  
+                bindonSelect="onSelectLogistics" 
+                placeholder="请选择物流方式" 
+                selectValue="{{logistics.name}}"
+            />
+            <group-time 
+                startTime="{{startTime}}"
+                range="{{timeRange}}" 
+                endTime="{{endTime}}" 
+                startIndexs="{{startIndexs}}" 
+                endIndexs="{{endIndexs}}"
+                bindstartchange="onGroupStartChange"
+                bindendchange="onGroupEndChange"
+                />
+
+            <!-- 这个版本先注释 <product-select 
+                title="团优惠设置" textAlignRight="{{true}}"  bindonSelect="settingDiscount" placeholder="未设置" 
+            /> -->
+
+            <product-select 
+                title="团隐私设置" textAlignRight="{{true}}" rangeKey="name" isPicker="{{true}}" bindonSelectChange="pickerPrivices" placeholder="未设置" selectSource="{{groupPrivices}}"
+                selectIndex="{{priviceIndex}}" selectValue="{{privice.name}}"
+            />
+
+            <!-- 暂时先做成输入 <product-select 
+                title="起购金额" textAlignRight="{{true}}"  bindonSelect="settingStartPrice" selectValue="{{startPrice}}元" 
+            />  -->
+            <product-input 
+                title="起购金额" placeholder="请输入起购金额" inputType="digit" value="{{startPrice}}" textAlignRight="{{true}}" bindonInPut="settingStartPrice"
+            />
+
+            <product-select 
+                title="是否允许复制" isPicker="{{true}}" rangeKey="name" textAlignRight="{{true}}" bindonSelectChange="settingCopy" selectValue="{{copyValue.name}}" selectSource="{{copySource}}"
+                selectIndex="{{copySourceIndex}}" 
+            /> 
+
+            <!-- <product-select 
+                title="团长帮卖" isPicker="{{true}}" rangeKey="name" textAlignRight="{{true}}" bindonSelectChange="settingGrouperHelpSold" selectValue="{{helpSold.name}}" 
+                selectSource="{{helpSoldSource}}" selectIndex="{{helpSoldIndex}}" 
+            />  -->
+
+            <product-select 
+                title="跟团人显示" isPicker="{{true}}" rangeKey="name" textAlignRight="{{true}}" bindonSelectChange="settingGroupUserShow" selectValue="{{groupUserShow.name}}" 
+                selectSource="{{groupUserShowSource}}" selectIndex="{{groupUserShowIndex}}" 
+            />
+
+            <product-input 
+                title="跟团提示" textAlignRight="{{true}}"  placeholder="输入提醒，团员跟团时可见提醒" value="{{followTips}}" bindonFinished="followTipsFinished"
+            />
+        </view>
+    </view>
+    <group-start-price 
+        showAlert="{{showStartPrice}}" selectIndex="{{startPriceIndex}}" 
+        bindcancel="onCancelStartPrice" bindconfirm="onConfirmStartPrice"
+    />
+</view>
+<footer-add-button title="发布" bindonSelect="onSelectFooterBtn"/>

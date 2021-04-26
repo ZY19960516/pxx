@@ -1,0 +1,17 @@
+/* pages/logistics/index.wxss */
+
+.wraper {
+    padding-bottom: 150rpx;
+}
+
+.content-wraper {
+    background-color: #fff;
+}
+
+.header {
+    padding: 20rpx;
+    background-color: #F4F6F9;
+    color: #cdcdcd;
+    font-size: 24rpx;
+    text-align: center;
+}

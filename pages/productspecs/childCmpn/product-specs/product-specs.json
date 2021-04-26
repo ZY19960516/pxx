@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "product-input": "/components/product-input/product-input",
+        "specs-detail-title": "../specs-detail-title/specs-detail-title"
+    }
+}

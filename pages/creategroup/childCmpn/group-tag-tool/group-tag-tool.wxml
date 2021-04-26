@@ -1,0 +1,13 @@
+<!--pages/creategroup/childCmpn/group-tag-tool/group-tag-tool.wxml-->
+<top-tool-bar title="标签" bindmoveUp="noMoveUp" bindmoveDwon="onMoveDwon" binddelete="onDelete" upEnable="{{upEnable}}" dwonEnable="{{dwonEnable}}">
+	<view class="tag-wraper">
+		<block wx:for="{{tags}}" wx:key="index">
+			<view class="item-wraper">
+				<text class="tag tag-sel">{{item}}</text>
+				<image bindtap="onSelectDelete" data-index="{{index}}" src="/assets/images/group/delete.png" class="delete" />
+			</view>
+		</block>
+		<view class="add-tag" bindtap="onSelectAddTag">＋ 添加标签</view>
+        <product-tag-alert show="{{show}}" selectTags="{{tags}}" selectCount="{{selectCount}}" bindonConfirm="onTagConfirm"/>
+	</view>
+</top-tool-bar>

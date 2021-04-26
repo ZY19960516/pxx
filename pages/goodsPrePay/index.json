@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "跟团购买",
+  "usingComponents": {
+    "wxc-price": "../../components/wxc-price",
+    "counter": "/components/counter/counter"
+  }
+}

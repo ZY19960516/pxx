@@ -1,0 +1,20 @@
+<!--pages/createaddress/index.wxml-->
+<view class="wraper">
+    <!-- 提货点联系人 -->
+    <address-input title="联系人" value="{{receiptName}}" placeholder="请输入联系人" bindfinishedInput="onUserNameFinished"/>
+
+    <!-- 提货点电话 -->
+    <address-input title="联系电话" value="{{receiptPhone}}" inputType="number" placeholder="请输入电话" bindfinishedInput="onPhoneFinished" maxLength='11'/>
+  
+    <!-- 提货点位置 -->
+    <address-input title="位置" type="{{3}}" value="{{region}}" placeholder="请选择位置" bindfinishedRegion="onFinisehdRegion"/>
+
+    <!-- 详细地址 -->
+    <address-input title="详细地址" type="{{2}}" value="{{receiptAddress}}" placeholder="请输入详细地址" bindfinishedInput="onAddressFinished"/>
+    
+</view>
+<!-- 底部按钮 -->
+<view class="footer" bindtap="onSelectAdd">确认</view>
+
+
+

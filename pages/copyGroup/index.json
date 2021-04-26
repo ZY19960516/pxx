@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "复制已有团",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#F0F0F0",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "no-data": "/components/no-data/no-data"
+  }
+}

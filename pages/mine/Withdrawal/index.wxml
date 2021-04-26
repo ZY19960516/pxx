@@ -1,0 +1,25 @@
+<!--提现-->
+<view class="content">
+	<!-- <view class="userInfo">
+		<view class="account">
+			<view class="accounTitle">到账账户</view>
+			<view class="accounName">微信零钱</view>
+		</view>
+		<view class="account borderNone">
+			<view class="accounTitle">账户实名</view>
+			<input type="text" bindblur="GetrealName" value="{{realName}}" placeholder="请输入绑定微信支付的实名"/>
+		</view>
+	</view> -->
+	<view class="userInfo withdrawalBox">
+		<text >提现金额</text>
+		<view class="enterMoneyAction">
+			<text class="moneyType">￥</text><input type="digit" bindinput="GetwithdrawalMoney" value="{{withdrawalMoney}}" maxlength="4" placeholder-class="moneyNum"/><text class="icon-shanchu2 iconfont" bindtap="clernInput"></text>
+		</view>
+		<view class="showMoney">
+			<text>当前可提现金额￥{{balance}}，</text><text class="withdrawalAll" bindtap="withdrawalAll">全部提现</text>
+		</view>
+	</view>
+	<view class="withdrawalBtn" bindtap="handleWithdrawal">
+		确认提现
+	</view>
+</view>

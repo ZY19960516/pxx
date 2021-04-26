@@ -1,0 +1,15 @@
+<!--pages/creategroup/childCmpn/group-tool-bar/group-tool-bar.wxml-->
+<view class="bar-wraper">
+    <block wx:for="{{dataSource}}" wx:key="index">
+        <view wx:if="{{index < 4}}" class="bar-item-wraper" bindtap="onSelect" data-index="{{index}}">
+            <image class="bar-image" src="{{item.image}}" />
+            <view class="bar-title">{{item.title}}</view>
+        </view>
+        <view wx:else class="bar-item-wraper {{tagEnable ? '' : 'bar-unenable'}}" bindtap="onSelect" data-index="{{index}}">
+            <image class="bar-image" src="{{item.image}}" />
+            <view class="bar-title">{{item.title}}</view>
+        </view>
+    </block>
+</view>
+
+

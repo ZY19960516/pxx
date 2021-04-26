@@ -1,0 +1,5 @@
+<!--收入明细-->
+<view class="content">
+    <view class="warn" wx:if="{{tipsShow}}">将商品或团分享给好友，他就可以成为你的团员了！</view>
+    <com-list list="{{list}}" detailsType="leagueMember"/>
+</view>

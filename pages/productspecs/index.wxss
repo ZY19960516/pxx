@@ -1,0 +1,36 @@
+/* pages/productspecs/index.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background-color: #F4F6F9;
+}
+
+.content {
+    margin: 0 20rpx;
+}
+
+
+.alert-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50rpx;
+}
+
+.alert-title {
+    padding-bottom: 30rpx;
+    color:  #242629;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+
+.alert-message {
+    color:  #242629;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+
+.alert-point {
+    color: #FF5050;
+}

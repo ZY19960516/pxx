@@ -1,0 +1,55 @@
+<!--pages/goodsPrePay/index.wxml-->
+<view class="box">
+
+    <view class="address" bindtap="selAddress">
+        <view class="left">
+            <view>
+                <text class="name">{{address&&address.name?address.name+" ":"添加收件人"}}</text>
+                <text class="name phone">{{address&&address.phone?address.phone:''}}</text>
+            </view>
+            <text
+                class="location">{{address&&address.address?address.province+address.city+address.area+address.address:"添加收件人地址"}}</text>
+        </view>
+
+        <image src="/assets/images/home/ic_submmit_order_arrow.png" />
+    </view>
+
+    <view class="goods_box">
+        <block wx:for="{{goodsList}}" wx:key="key">
+            <view class="goods-item">
+                <image class="goods-img" lazy-load="true" mode="aspectFill" src="{{item.proImg[0]}}" />
+                <view class="goods-text">
+                    <text class="text-black">{{item.proName}}</text>
+                    <text class="goods-desc">{{item.proName}}</text>
+
+                    <text class="goods-desc"
+                        wx:if="{{item.ruleList&&item.ruleList.length>0}}">已选择：{{item.selRule1}}{{item.selRule2?'/':''}}{{item.selRule2}}</text>
+                        
+                    <view class="counter_box">
+                        <wxc-price class='goods-price' icon='sub' value='{{item.proPrice}}' />
+
+                        <counter class="counter" num='{{item.num}}' minNum='1' limitNum='{{item.limitBuy}}'
+                            stock='{{item.surplusStock}}' extraData='{{item}}' bindOnNumResult="OnNumResult" />
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="goods_total_price">
+            <text class="text1">商品总价</text>
+            <wxc-price class="text2" value='{{totalPrice}}' />
+        </view>
+
+        <view class="goods_total_price">
+            <text class="total_num">共{{totalNum}}件</text>
+            <text>实际支付：</text>
+            <wxc-price class="total_price" value='{{totalPrice}}' />
+        </view>
+    </view>
+
+    <view class="bottom_box">
+        <text class="text-total">实际支付：</text>
+        <wxc-price class="goods-price-big" icon="sub" value='{{totalPrice}}' />
+
+        <text class="buy" bindtap="buy">立即支付</text>
+    </view>
+</view>

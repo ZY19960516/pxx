@@ -1,0 +1,12 @@
+<!--pages/addproduct/childCmpn/top-tool-bar/top-tool-bar.wxml-->
+<view class="tool-bar-wraper">
+	<view class="header-item-wraper">
+		<view class="title">{{title}}</view>
+		<view class="item-wraper">
+			<view class="btn-title {{upEnable ? '' : 'un-enable'}}" bindtap="onMoveUp">上移</view>
+			<view class="btn-title {{dwonEnable ? '' : 'un-enable'}}" bindtap="onMoveDwon">下移</view>
+			<view class="btn-title" bindtap="onDelete">删除</view>
+		</view>
+	</view>
+	<slot></slot>
+</view>

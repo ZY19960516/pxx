@@ -1,0 +1,10 @@
+<!--pages/login/index.wxml-->
+<view class="login-wraper">
+    <view class="header-wraper">
+        <image class="header" src="/assets/images/mine/login_header.png" />
+        <image class="icon" src="https://c.lishengduo.com/wt/images/minip_icon.png"/>
+        <view class="app-name">{{appName}}</view>
+    </view>
+    <button class="button" lang="zh_CN" size="default" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
+    <view class="login-later" bindtap="onSelectLoginLater">暂不登录</view>
+</view>

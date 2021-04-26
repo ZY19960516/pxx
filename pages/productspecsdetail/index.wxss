@@ -1,0 +1,11 @@
+/* pages/productspecsdetail/index.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background-color: #F4F6F9;  
+}
+
+.detial-wraper {
+    margin: 0 20rpx;
+    padding-bottom: 170rpx;
+}

@@ -1,0 +1,52 @@
+/* pages/productspecs/childCmpn/product-specs-detail/product-specs-detail.wxss */
+
+.specs-detail-wraper {
+    background-color: #fff;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.content {
+    padding: 0 20rpx;
+}
+
+.cover-image-wraper {
+    padding: 20rpx 0;
+}
+
+.image-wraper {
+    margin: 40rpx 20rpx 20rpx;
+    width: 180rpx;
+    height: 180rpx; 
+    position: relative;
+}
+
+.select-image {
+    width: 180rpx;
+    height: 180rpx; 
+}
+
+.delete {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #242629;
+}
+
+.specs-tag {
+    background-color: #0FC7E3;
+    color: #fff;
+    font-size: 24rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    width: 80rpx;
+    border-radius: 0 0 20rpx 0;
+}

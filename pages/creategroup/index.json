@@ -1,0 +1,19 @@
+{
+  "navigationBarBackgroundColor": "#0FC7E3",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "创建团购",
+  "usingComponents": {
+    "user-info": "./childCmpn/user-info/user-info",
+    "product-input": "/components/product-input/product-input",
+    "group-input-tool": "./childCmpn/group-input-tool/group-input-tool",
+    "group-tag-tool": "./childCmpn/group-tag-tool/group-tag-tool",
+    "group-tool-bar": "./childCmpn/group-tool-bar/group-tool-bar",
+    "group-image-tool": "./childCmpn/group-image-tool/group-image-tool",
+    "group-video-tool": "./childCmpn/group-video-tool/group-video-tool",
+    "footer-add-button": "/components/footer-add-button/footer-add-button",
+    "product-select": "/components/product-select/product-select",
+    "group-start-price": "./childCmpn/group-start-price/group-start-price",
+    "group-product": "./childCmpn/group-product/group-product",
+    "group-time": "./childCmpn/group-time/group-time"
+  }
+}

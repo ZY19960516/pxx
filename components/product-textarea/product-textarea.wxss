@@ -1,0 +1,24 @@
+/* components/product-textarea/product-textarea.wxss */
+
+.product-wraper {
+    display: flex;
+    min-height: 88rpx;
+    border-bottom: 2rpx solid #F2F4F7;
+    align-items: center;
+}
+
+.input-name {
+    font-size: 28rpx;
+    color: #242629;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    width: 30%;
+}
+
+.textarea {
+    padding: 20rpx 0;
+    flex: 1;
+    font-size: 28rpx;
+    color: #242629;
+}

@@ -1,0 +1,25 @@
+<!--components/product-tag-alert/product-tag-alert.wxml-->
+<alert-box title="请选择" show="{{show}}" bindonClose="onClose" bindonConfirm="onConfirm">
+    <view>
+        <view class="select-tag-wraper">
+            <view class="select-tag">已选标签(<text class="count">{{selectTags.length}}</text>/{{selectCount}})</view>
+            <view class="total-tags">
+                <block wx:for="{{selectTags}}" wx:key="index">
+                    <view class="item-wraper">
+                        <text class="tag tag-sel" data-item="{{item}}" bindtap="onSelectTag">{{item}}</text>
+                        <image bindtap="onSelect" data-index="{{index}}" src="/assets/images/group/delete.png" class="delete"/>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="select-tag-wraper">
+            <view class="select-tag border-top">所有标签<text class="placeholder">(点击标签选择)</text></view>
+            <view class="total-tags">
+                <block wx:for="{{tags}}" wx:key="index">
+                    <text class="tag tag-ori" data-item="{{item}}" bindtap="onSelectTag">{{item}}</text>
+                </block>
+            </view>
+        </view>
+    </view>
+</alert-box>
+

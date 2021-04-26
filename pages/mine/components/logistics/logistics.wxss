@@ -1,0 +1,91 @@
+/* components/alert-box/alert-box.wxss */
+
+.logistics {
+    border-top:1px solid #f4f4f4;
+    padding: 20rpx 0;
+    border-bottom:1px solid #f4f4f4;
+}
+
+.logics-header {
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f4f4f4;  
+}
+
+.grayText {
+    color: gray;
+    font-size: 26rpx; 
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.check-wuliu {
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    color: #07c160;
+    font-size: 26rpx; 
+    width: 160rpx;
+    border: 2rpx solid #07c160;
+    border-radius: 4rpx;
+}
+
+.name {
+    width: 40%;
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+}
+.information {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.receiptAddress {
+    width: 70%;
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+}
+.icon-weibiaoti- {
+    flex: 0 0 120rpx;
+}
+.iconfont {
+    font-family: "iconfont";
+    font-size: 28rpx;
+    text-align: center;
+    z-index: 1;
+}
+
+.com-font {
+    font-size: 26rpx;
+}
+
+.copy {
+    border: 1px solid #f4f4f4;
+    padding: 0 10rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.icon-weibiaoti- {
+    font-size: 40rpx;
+    color: #07c160;
+    font-weight: bold;
+}
+.rightMargin {
+    margin-right: 20rpx;
+}
+.icon-didian,
+.icon-wo  {
+    font-size: 40rpx;
+    color: #07c160;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "address-item": "./childCmpn/address-item/address-item",
+    "footer-add-button": "/components/footer-add-button/footer-add-button"
+  }
+}

@@ -1,0 +1,17 @@
+/* pages/creategroup/childCmpn/input-tool/input-tool.wxss */
+
+.wraper {
+    background-color: #fff;
+}
+
+.textarea {
+    min-height: 50rpx;
+    font-size: 26rpx;
+    color: #242629;
+    width: 100%;
+}
+
+.placeholder {
+    color: #bfbfbf;
+    font-size: 26rpx;
+}

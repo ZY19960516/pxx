@@ -1,0 +1,20 @@
+<!--我的钱包-->
+<view class="content">
+	<view class="action">
+		<text class="reason">可提现金额(元)</text>
+		<text class="money">{{balance}}</text>
+		<text class="details" bindtap="gobillingDetails">查看资产明细<text class="icon-tubiao- iconfont" style="marginTop:5rpx"></text></text>
+		<view class="actionBtn" bindtap="goWithdrawal">
+			提现至零钱
+		</view>
+	</view>
+	<view class="Progress" bindtap="goWithdrawalList">
+		<text class="tipsTitle">提现进度</text>
+		<text class="icon-tubiao- iconfont"></text>
+	</view>
+	<view class="tips">
+		<text class="tipsTitle">温馨提示</text>
+		<!-- <text>(1)技术服务费全网最低，仅千分之6</text> -->
+		<text >微信零钱提现每天限额3000，实时到账</text>
+	</view>
+</view>

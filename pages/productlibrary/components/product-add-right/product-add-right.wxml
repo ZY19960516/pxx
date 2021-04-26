@@ -1,0 +1,40 @@
+<!--pages/productlibrary/childs/product-add-right/product-add-right.wxml-->
+<view wx:if="{{source.length == 0}}" class="none">
+	<image class="none-image" src="/assets/images/group/product-none.png" />
+	<text class="none-text">该分类暂无商品</text>
+</view>
+
+<view wx:else class="wraper">
+    <block wx:for="{{source}}" wx:key="index" >
+        <view class="product-wraper" data-index="{{index}}">
+            <view class="product-top">
+                <image class="image" src="{{item.proImg[0]}}" mode="aspectFit"/>
+                <view class="right-wraper">
+                    <view class="name">{{item.proName}}</view>
+                    <wxs src="./product-add-right.wxs" module="format"/>
+                    <view class="specs">{{format.specsOne(item.oneRule, item.oneRuleContext)}}</view>
+                    <view class="specs">{{format.specsTwo(item.twoRule, item.twoRuleContext)}}</view>
+                    <view class="price">价格：￥{{item.proPrice}}</view>
+                    <view class="pro-bottom">
+                        <view class="ori-price">原价：￥{{item.crossedPrice}}</view>
+                        <view class="specs">库存：{{item.stock}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="action-wraper">
+                <view  class="action-item">
+                    <check-box checked="{{item.isCheck}}" bindonSelected="onCehckProduct" data-index="{{index}}"/>
+                </view>
+                <view class="action-item" bindtap="editProduct" data-item="{{item}}">
+                    <image class="pro-image" src="/assets/images/group/pro_lib_edit.png"/>
+                    <text class="pro-text">编辑</text>
+                </view>
+                <view class="action-item" bindtap="deleteProduct" data-item="{{item}}">
+                    <image class="pro-image" src="/assets/images/group/pro_lib_delete.png"/>
+                    <text class="pro-text">删除</text>
+                </view>
+            </view>
+        </view>
+    </block>
+     <view class="no-more" wx:if="{{showNoMore}}">~ 没有更多了 ~</view>
+</view>

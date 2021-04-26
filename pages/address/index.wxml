@@ -1,0 +1,11 @@
+<!--pages/address/index.wxml  //isUserAddress 表示是否是选 收货地址 -->
+<view class="wraper">
+	<block wx:for="{{dataSource}}" wx:key="index">
+		<address-item bindedit="onEditAddress" isUserAddress="true" selectAddress="{{isSelect}}" selected="{{item.select || false}}" binddelete="onDeleteAddress" bindsetgrouper="onSetgrouperAddress" dataSource="{{item}}" bindselect="onSelectAddress" data-item="{{item}}"/>
+	</block>
+	<view wx:if="{{isSelect}}" class="bottom-btn-wraper">
+		<view class="add-item btn" bindtap="onAddAddress">＋ 新增地址</view>
+		<view class="confirm-item btn" bindtap="selectAddressConfirm">确定</view>
+	</view>
+	<footer-add-button wx:else title="＋ 新增地址" bindonSelect="onAddAddress" />
+</view>

@@ -1,0 +1,57 @@
+/* pages/productspecs/childCmpn/specs-detail-title/specs-detail-title.wxss */
+
+.detial-wraper {
+    display: flex;
+    min-height: 88rpx;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #242629;
+    width: 30%;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.right {
+    width: 70%;
+    min-height: 88rpx;
+}
+
+.input-wraper {
+    display: flex;
+    align-items: center;
+    height: 88rpx;
+    border-bottom: 2rpx solid #F2F4F7;
+}
+
+.input {
+    flex:1;
+}
+
+.input-placeholder {
+    color:#bfbfbf;
+    font-size: 28rpx;
+}
+
+.clear {
+    margin-left: 10rpx;
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    color: #fff;
+    background-color: #cdcdcd;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 23rpx;
+}
+
+.add-specs-detail {
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    color: #0FC7E3;
+    font-size: 24rpx;
+    font-weight: bold;
+}

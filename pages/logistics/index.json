@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "物流方式",
+  "usingComponents": {
+    "footer-add-button": "/components/footer-add-button/footer-add-button",
+    "logistics-select": "./childCmpn/logistics-select/logistics-select"
+  }
+}

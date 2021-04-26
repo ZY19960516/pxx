@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "create-discount-alert": "../create-discount-alert/create-discount-alert"
+    }
+}

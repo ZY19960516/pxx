@@ -1,0 +1,5 @@
+<!--components/product-textarea/product-textarea.wxml-->
+<view class="product-wraper">
+	<text class="input-name">{{title}}</text>
+	<textarea class="textarea" value="{{value}}" placeholder="{{placeholder}}" placeholder-style="color:#bfbfbf" bindinput="onFinished" maxlength="{{maxlength}}" auto-height />
+</view>

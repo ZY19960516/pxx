@@ -1,0 +1,40 @@
+<view class="wraper" wx:if="{{followList.length > 0}}">
+	<view class="info" wx:for="{{followList}}" wx:key='index' >
+		<view class="infoHeader">
+			<view class="leftBox">
+				<text class="boxNum">{{index+1}}</text>
+				<view class="wxinfo">
+					<image class="goods-counter-img" lazy-load="true" mode="aspectFill" src="{{item.userHeader}}"></image>
+					<text class="wxName">{{item.userName}}</text>
+				</view>
+			</view>
+			<view class="rightBox"> 
+				<!-- {{item.writeOff == 1 ? '已提货' : '待提货'}} -->
+				已支付
+			</view>
+		</view>
+		<view class="activityBox">
+			<text class="activityTitle">{{item.groupInfoTittle}}</text>
+			<text class="activityDetails" bindtap="toActiveity" data-groupInfoId="{{item.groupInfoId}}"  data-groupInfoTittle="{{item.groupInfoTittle}}">查看活动</text>
+		</view>
+		<view class="shopInfo">
+			<view class="shopList" wx:for="{{item.orderProducts}}" wx:for-index="idx" wx:for-item="initem" wx:key="idx">
+				<text >{{initem.proName}}</text>
+				<text class="buyNum">+{{initem.buyNum}}件</text>
+				<text >￥{{initem.proPrice}}</text>
+			</view>
+		</view>
+		<!-- 物流信息 -->
+		<logistics receiptAddress="{{item.receiptAddress}}" receiptArea="{{item.receiptArea}}" receiptCity="{{item.receiptCity}}" receiptProvince="{{item.receiptProvince}}" receiptPhone="{{item.receiptPhone.val}}" receiptName="{{item.receiptName.val}}"/>
+		<!-- 有物流 -->
+		<order-logistics wx:if="{{item.logisticsNumber}}" logisticsNumber="{{item.logisticsNumber}}" logisticsName="{{item.logisticsName}}"  orderNo="{{item.orderNo}}"/>
+		<!-- 添加物流 -->
+		<!-- <view class="addLogistics iconfont icon-jia" bindtap="addLogistics" data-orderNo="{{item.orderNo}}" wx:else>
+			添加物流信息
+		</view> -->
+	</view>
+</view>
+<view class="noData" wx:else>
+	<text class="iconfont icon-meiyoudingdan"></text>
+	<text >嘤嘤嘤~暂时没有订单哦~</text>
+</view>

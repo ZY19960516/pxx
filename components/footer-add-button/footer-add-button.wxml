@@ -1,0 +1,4 @@
+<!--components/footer-add-button/footer-add-button.wxml-->
+<view class="footer-wraper">
+    <view class="footer" bindtap="onSelectAdd">{{title}}</view>
+</view>

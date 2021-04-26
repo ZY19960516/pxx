@@ -1,0 +1,38 @@
+var specsStr = function(rule, ruleContent) {
+    var res = ''
+    if (rule && rule.length > 0) {
+        res = rule
+    }
+    if (ruleContent && ruleContent.length > 0) {
+        res = res + '：' + ruleContent
+    }    
+    return res
+}
+
+var formatSpecsOne = function(oneRule, oneRuleContext) {
+    return specsStr(oneRule, oneRuleContext)
+}
+
+var formatSpecsTwo = function(twoRule, twoRuleContext) {
+    return specsStr(twoRule, twoRuleContext)
+}
+
+var getIsCheck = function(id, selects) {
+    var isCehck = false
+    for (var index = 0; index < selects.length; index++) {
+        const element = selects[index];
+        if (element.id == id) {
+            isCehck = true
+            break
+        }
+    }
+    return isCehck
+}
+
+
+
+module.exports = {
+    specsOne: formatSpecsOne,
+    specsTwo:formatSpecsTwo,
+    isCheck: getIsCheck
+}

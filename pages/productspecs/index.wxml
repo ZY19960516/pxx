@@ -1,0 +1,26 @@
+<!--pages/productspecs/index.wxml-->
+
+<view class="content">
+	<block wx:for="{{specsSource}}" wx:key="index">
+		<product-specs index="{{index+1}}" details="{{item.details}}" specsTitle="{{item.specsTitle}}" bindonDelete="onDeleteSpecs" bindfinishe="productSpecs" data-index="{{index}}" />
+	</block>
+
+	<!-- 添加规格按钮 -->
+	<specs-add wx:if="{{specsSource.length < 2}}" bindonSelect="addSpecs" num="{{specsSource.length+1}}"/>
+</view>
+
+<alert-center-box  
+	show="{{showEditAlert}}" 
+	isSingleBtn="{{true}}" 
+	confirmTitle="知道了" 
+	bindconfirm="onClose"
+> 
+	<view class="alert-wraper">
+		<view class="alert-title">修改提示</view>
+		<view class="alert-message">修改规格设置，需要点击<Text class="alert-point">下一步</Text>，完善内容才能完成修改，否则修改无效！</view>
+	</view>
+</alert-center-box>
+
+<!-- 底部添加按钮 -->
+<footer-add-button title="下一步" bindonSelect="onFinishedAdd" />
+

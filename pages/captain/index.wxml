@@ -1,0 +1,24 @@
+<!--pages/home/index.wxml-->
+<view class="box">
+	<view class="header" slot="before" wx:if="{{userInfo.leaderName}}">
+		<view class="flexInfo">
+			<image class="item-header-icon" lazy-load="true" mode="aspectFill" src="{{userInfo.headerImg}}"></image>
+
+			<view class="header_card">
+				<text class="text-black-member">{{userInfo.leaderName}}</text>
+				<text class="text-black">已有成员{{userInfo.membersNum}}</text>
+			</view>
+
+			<text class="edit" bindtap="editHome" wx:if="{{isMine}}">编辑主页</text>
+		</view>
+
+		<text class="text-gray" bindtap="editHome">{{userInfo.introduction}}</text>
+
+		<view class="text-black" bindtap="editHome">
+			<text class="iconfont icon-didian"></text>
+			<text>{{userInfo.address}}</text>
+		</view>
+	</view>
+
+	<group-list isPullFresh='{{isPullFresh}}' isLoadMore='{{isLoadMore}}' type='2' userId='{{curUserId}}' class="list"/>
+</view>

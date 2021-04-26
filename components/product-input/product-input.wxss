@@ -1,0 +1,27 @@
+/* components/product-input/product-input.wxss */
+.product-wraper {
+    display: flex;
+    height: 88rpx;
+    border-bottom: 2rpx solid #F2F4F7;
+    align-items: center;
+}
+
+.input-name {
+    font-size: 28rpx;
+    color: #242629;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    width: 30%;
+}
+
+.input {
+    flex: 1;
+    height: 88rpx;
+    font-size: 28rpx;
+    color: #242629;
+}
+
+.input-right {
+    text-align: right;
+}

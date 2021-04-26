@@ -1,0 +1,44 @@
+/* components/product-select/product-select.wxss */
+.product-wraper {
+    display: flex;
+    height: 88rpx;
+    border-bottom: 2rpx solid #F2F4F7;
+    align-items: center;
+}
+
+.input-name {
+    font-size: 28rpx;
+    color: #242629;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: left;
+    width: 30%;
+}
+
+.select-content {
+    flex: 1;
+    height: 88rpx;
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+
+.value {
+    color: #242629;
+}
+
+.palceholder {
+    color: #bfbfbf;
+}
+
+
+.more-image {
+    width: 13rpx;
+    height: 22rpx;
+    margin-left: 10rpx;
+}
+
+.input-right {
+    text-align: right;
+}

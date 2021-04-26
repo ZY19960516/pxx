@@ -1,0 +1,19 @@
+/* pages/addproduct/index.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background-color: #F4F6F9;
+}
+
+.wraper {
+    padding: 0 32rpx;
+    background-color: #fff;
+    padding-bottom: 150rpx;
+}
+
+
+
+
+
+
+

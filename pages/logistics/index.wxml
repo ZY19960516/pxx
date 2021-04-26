@@ -1,0 +1,11 @@
+<!--pages/logistics/index.wxml-->
+<view class="wraper">
+	<view class="header"></view>
+	<!-- 可同时选择快递/同城配送/顾客自提 -->
+	<view class="content-wraper">
+		<block wx:for="{{dataSource}}" wx:key="index">
+			<logistics-select title="{{item.name}}" logistics="{{item}}" bindselect="onSelectToSet" bindstatusChange="onStatusChange" data-index="{{index}}" />
+		</block>
+	</view>
+	<footer-add-button title="完成" bindonSelect="onSelectFinished" />
+</view>

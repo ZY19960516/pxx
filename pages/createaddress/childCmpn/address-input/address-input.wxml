@@ -1,0 +1,39 @@
+<!--pages/createaddress/address-input/address-input.wxml-->
+<view class="input-wraper">
+	<view class="input-title">{{title}}</view>
+    <input  
+        wx:if="{{type == 1}}" 
+        class="input-content"
+        type="{{inputType}}" 
+        placeholder-class="input-placeholder" 
+        value="{{value}}" 
+        maxlength="{{maxLength}}" 
+        placeholder="{{placeholder}}" 
+        bindblur="onFinishedInput" 
+    />
+    <textarea 
+        wx:elif="{{type == 2}}" 
+        class="input-content" 
+        value="{{value}}" 
+        placeholder-class="input-placeholder" 
+        placeholder="{{placeholder}}" 
+        maxlength="{{maxLength}}" 
+        auto-height="{{true}}" 
+        bindinput="onFinishedInput"
+    />
+	<picker 
+        wx:else
+        class="picker"  
+        mode = "region" 
+        bindchange="onSelectedRegion" 
+        value="{{selectRegion}}"
+    >
+        <input 
+            class="input-content" 
+            disabled="true"  
+            placeholder-class="input-placeholder" 
+            value="{{value}}" 
+            placeholder="{{placeholder}}"
+        />
+    </picker>
+</view>

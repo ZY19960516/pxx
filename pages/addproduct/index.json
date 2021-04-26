@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "product-tag-alert": "/components/product-tag-alert/product-tag-alert",
+    "footer-add-button": "/components/footer-add-button/footer-add-button",
+    "product-input": "/components/product-input/product-input",
+    "product-textarea": "/components/product-textarea/product-textarea",
+    "product-select": "/components/product-select/product-select",
+    "add-product-image": "./childCmpn/add-product-image/add-product-image",
+    "product-specs-input": "./childCmpn/product-specs-input/product-specs-input"
+  }
+}

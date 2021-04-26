@@ -1,0 +1,27 @@
+<!--pages/creategroup/childCmpn/group-image-tool/group-image-tool.wxml-->
+<top-tool-bar title="{{isLarge ? '大图' : '小图'}}" bindmoveUp="noMoveUp" bindmoveDwon="onMoveDwon" binddelete="onDelete" upEnable="{{upEnable}}" dwonEnable="{{dwonEnable}}">
+	<!-- 选择大图 -->
+	<view wx:if="{{isLarge}}">
+		<view wx:if="{{largeImage}}"  class="large-image-wraper large-image-size">
+			<image class="large-image-size" src="{{largeImage}}" />
+            <image class="delete" bindtap="onDeleteBig"  src="/assets/images/group/delete_product_image.png" />
+		</view> 
+        <view wx:else class="big-place-image-wraper large-image-size" bindtap="onSelectLargeImage">
+            <image class="big-place-image" src="/assets/images/group/gourp_place_picture.png" />
+            <view class="big-image-title">上传图片</view>
+        </view>
+	</view>
+	<!-- 选择小图 -->
+	<view wx:else class="image-wraper">
+		<block wx:for="{{images}}" wx:key="index">
+			<view class="min-image-wraper">
+				<image class="min-image" src="{{item}}" mode="aspectFit"/>
+				<image class="delete" bindtap="onMinDelete" data-index="{{index}}" src="/assets/images/group/delete_product_image.png" />
+			</view>
+		</block>
+		<view class="min-image-wraper" bindtap="selectImage">
+			<image class="min-place-image" src="/assets/images/group/gourp_place_picture.png" />
+            <view class="image-title">上传图片</view>
+		</view>
+	</view>
+</top-tool-bar>

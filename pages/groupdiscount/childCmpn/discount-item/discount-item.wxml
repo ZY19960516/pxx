@@ -1,0 +1,5 @@
+<!--pages/groupdiscount/childCmpn/discount-item/discount-item.wxml-->
+<view class="item-wraper">
+    <view class="discount-text">满<text class="discount">{{discount.maxAmount}}元</text>减<text class="discount">{{discount.discount}}元</text></view>
+    <view class="discount-delete" bindtap="onDeleteItem">删除</view>
+</view>

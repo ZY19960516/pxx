@@ -1,0 +1,36 @@
+/* pages/groupdiscount/childCmpn/create-discount/create-discount.wxss */
+.create-wraper {
+    padding: 32rpx;
+    background-color: #fff;
+    border-radius: 16rpx;
+    display: flex;
+    align-items: center;
+}
+
+.create-left {
+    border: 5rpx solid #0FC7E3;
+    color: #0FC7E3;
+    font-weight: bold;
+    font-size: 30rpx;
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.create-right {
+    flex: 1;
+    margin-left: 20rpx;
+}
+
+.create-title {
+    font-size: 26rpx;
+    color: #242629;
+    padding-bottom: 5rpx;
+}
+
+.create-sub-title {
+    font-size: 22rpx;
+    color: #8a8a8a;
+}

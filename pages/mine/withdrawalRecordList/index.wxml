@@ -1,0 +1,16 @@
+<!--提现记录-->
+<view class="content">
+	<block wx:if="{{recordList.length > 0}}" wx:key="index">
+		<view class="listBox" wx:for="{{recordList}}" wx:key="index" >
+			<view class="centerBox">
+				<text >交易类型：{{item.transactionStatus}}</text>
+				<text >{{item.createdAt}}</text>
+			</view>
+			<text class="amount">￥{{item.transactionAmount/100}}</text>
+		</view>
+	</block>
+	<view class="noData" wx:else>
+		<text class="iconfont icon-meiyoudingdan"></text>
+		<text >嘤嘤嘤~暂时没有订单哦~</text>
+	</view>
+</view>

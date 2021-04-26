@@ -1,0 +1,72 @@
+/* pages/creategroup/childCmpn/group-image-tool/group-image-tool.wxss */
+.large-image-wraper {
+    position: relative;
+}
+
+.large-image-size {
+    width: 100%;
+    height: 280rpx;
+}
+
+.big-place-image-wraper {
+    background-color: #f0f1f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.big-place-image {
+    width: 60rpx;
+    height: 60rpx;
+} 
+
+.big-image-title {
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    color: #afb7c4;
+}
+
+
+.image-wraper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.min-image-wraper {
+    width: 190rpx;
+    height: 190rpx;
+    margin-bottom: 10rpx;
+    position: relative;
+    margin-right: 10rpx;
+    background-color: #f0f1f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.min-image {
+    width: 190rpx;
+    height: 190rpx;
+}
+
+.delete {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.min-place-image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.image-title {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: #afb7c4;
+}

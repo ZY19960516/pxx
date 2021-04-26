@@ -1,0 +1,41 @@
+<!--pages/address/childCmpn/address-item/address-item.wxml-->
+<view class="item-warper">
+	<view class="content">
+		<view wx:if="{{selectAddress}}" class="image-wraper">
+			<image class="header-select-image" bindtap="onSelectAddress" src="/assets/images/group/{{selected ? 'pro_lib_select.png' : 'pro_lib_unselect.png'}} " />
+			<image class="header-select-image" bindtap="onEdit" src="/assets/images/group/pro_lib_edit.png" />
+		</view>
+		<view class="address-msg">
+			<view class="item">
+				<view class="item-title">联系人：</view>
+				<view class="item-content">{{dataSource.name.val || ''}}</view>
+			</view>
+			<view class="item">
+				<view class="item-title">联系电话：</view>
+				<view class="item-content">{{dataSource.phone.val || ''}}</view>
+			</view>
+			<view class="item" wx:if="{{!isUserAddress}}">
+				<view class="item-title">提货点名称：</view>
+				<view class="item-content">{{dataSource.deliveryName || ''}}</view>
+			</view>
+			<view class="item">
+				<view class="item-title">详细地址：</view>
+				<view class="item-content">{{dataSource.address || ''}}</view>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{selectAddress == false}}" class="footer-wraper">
+		<!-- <view class="footer-item" bindtap="onSetGouper">
+			<image class="footer-image" bindtap="onEdit" src="/assets/images/group/address_set_grouper.png" />
+			<text class="footer-text">设置团长</text>
+		</view>-->
+		<view class="footer-item" bindtap="onDelete">
+			<image class="footer-image" src="/assets/images/group/pro_lib_delete.png" />
+			<text class="footer-text">删除</text>
+		</view> 
+		<view class="footer-item" bindtap="onEdit">
+			<image class="footer-image" src="/assets/images/group/pro_lib_edit.png" />
+			<text class="footer-text">编辑地址</text>
+		</view>
+	</view>
+</view>

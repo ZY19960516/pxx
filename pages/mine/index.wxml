@@ -1,0 +1,134 @@
+<!--pages/mine/index.wxml-->
+
+<view class="content">
+	<view class="bgliner">
+	<view class="header">
+		<view class="item">
+			<view class="item-left">
+				<image src="{{userInfo.headerImg ? userInfo.headerImg : '../../assets/images/mine/mine_nologin.png'}}" mode="aspectFit"></image>
+				<view class="infoBox" wx:if="{{isLogin}}">
+					<view class="name">
+						{{userInfo.leaderName}}
+					</view>
+					<view class="collageNum">
+						累计发团{{userInfo.openningNum}}次
+					</view>
+				</view>
+				<view class="loginBox"wx:else bindtap="goLogin">
+					去登录>
+				</view>
+			</view>
+			<view class="item-right" bindtap="goHomepage">
+				<view class="goHome">
+					前往主页
+				</view>
+				<text class="more icon-tubiao-"></text>
+			</view>
+		</view>
+	</view>
+	<view class="money">
+		<view class="moneyBox borderRight">
+			<view class="numstyle">￥{{userInfo.accountAmount/100 || 0}}
+      </view>
+			<view class="Withdrawal" >
+				<view class="word">
+					余额
+				</view>
+        <view class="WithdrawalBtn" bindtap="goWallet">
+          提现
+        </view>
+        <!-- <view class="WithdrawalBtn" bindtap="goIncomeDetails">
+          账单
+        </view> -->
+			</view>
+		</view>
+
+		<view class="moneyBox">
+			<view class="numstyle">{{userInfo.membersNum || 0}}</view>
+			<view class="Withdrawal">
+				<view class="word">
+					团员
+				</view>
+				<view class="WithdrawalBtn" bindtap="goleagueMember">
+					列表
+				</view>
+			</view>
+		</view>
+		<!-- <view class="teamBox" bindtap="goleagueMember">
+			<view class="numstyle">{{userInfo.membersNum}}</view>
+			<view class="textstyle">我的团员</view>
+		</view> -->
+	</view>
+	</view>
+	<view class="tableIcon">
+		<view class="item-table" bindtap="goProductlibrary">
+			<view class="iconfont icon-shangpinku">
+			</view>
+			<text>商品库</text>
+		</view>
+		<view class="item-table" bindtap="goAddress">
+			<view class="iconfont icon-tihuodianguanli">
+			</view>
+			<text>收货地址</text>
+		</view>
+		<view class="item-table" bindtap="goOrder">
+			<view class="iconfont icon-dingdan">
+			</view>
+			<text>订单管理</text>
+		</view>
+		<!-- <view class="item-table" bindtap="goVerification">
+				<view class="iconfont icon-hexiao">
+				</view>
+				<text>商品核销</text>
+			</view> -->
+    <!-- <view class="item-table" bindtap="goWallet">
+				<view class="iconfont icon-hexiao">
+				</view>
+				<text>提现</text>
+    </view> -->
+		<view class="item-table" bindtap="goSetting">
+			<view class="iconfont icon-gerenshezhi">
+			</view>
+			<text>个人设置</text>
+		</view>
+		<!-- <view class="item-table">
+			<view class="iconfont icon-lianxikefu">
+			</view>
+			<text>联系客服</text>
+		</view> -->
+	</view>
+	<!-- <view class="content-box" wx:for="{{list}}" wx:key="index">
+			<view class="item-bottom" mark:myMark="{{item}}">
+				<view class="activeName">
+					<view class="name">
+						团团围住
+					</view>
+					<view class="shareBtn" catchtap="openDialog">
+						<text class="Wxicon icon-weixin"></text><button open-type="share"  mark:myMark="{{item}}">分享</button>
+					</view>
+				</view>
+				<view class="amount">
+					￥<text >0.01</text>
+					<view class="collageing">
+						正在跟团
+					</view>
+				</view>
+				<view class="moneyInfo">
+					<text>总收入<text style="color: red;" >￥0.01</text></text>
+					<text class="textpadding">退款金额<text class="numcolor">￥0</text></text>
+				</view>
+				<view class="collageInfo">
+					<text>已跟团<text class="numcolor">1人</text></text>
+					<text class="textpadding">取消跟团<text class="numcolor">0人</text></text>
+					<text class="textpadding">浏览<text class="numcolor">0人</text></text>
+				</view>
+				<view class="activeStatus">
+					<view class="status">
+						正在跟团中
+					</view>
+					<text class="more icon-gengduo"  bindtap="showAction"></text>
+				</view>
+			</view>
+		</view> -->
+	<group-list isPullFresh='{{isPullFresh}}' isLoadMore='{{isLoadMore}}' type='2' userId='{{userId}}' />
+</view>

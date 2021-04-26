@@ -1,0 +1,45 @@
+/* pages/groupdiscount/childCmpn/create-discount-alert/create-discount-alert.wxss */
+.content {
+    padding-bottom: 20rpx;
+}
+
+
+.title {
+    padding: 32rpx;
+    color: #242629;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.set-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 32rpx;
+}
+
+.input-wraper {
+    height: 80rpx;
+    border-radius: 10rpx;
+    border: 2rpx solid #F2F4F7;
+    width: 48%;
+    display: flex;
+    align-items: center;
+}
+
+.input-title {
+    color: #242629;
+    padding: 0 10rpx;
+    font-size: 26rpx;
+}
+
+.input {
+    flex:1;
+    color: #242629;
+    font-size: 26rpx;
+    text-align: center;
+}
+.input-placeholder {
+    color: #bfbfbf;
+    font-size: 26rpx;
+}

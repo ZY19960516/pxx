@@ -1,0 +1,7 @@
+<!--pages/groupdiscount/index.wxml-->
+<view class="content-wraper">
+    <create-discount discounts="{{discounts}}" bindcreate="onCreateDiscount" bindfinishedcreate="onFinishedCreate"/>
+    <block wx:for="{{discounts}}" wx:key="index">
+        <discount-item binddelete="onDeleteDiscountItem" data-index="{{index}}" discount="{{item}}"/>
+    </block>
+</view>

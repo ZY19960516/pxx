@@ -1,0 +1,28 @@
+<!--pages/group/index.wxml-->
+<view class="group-wraper">
+	<view class="group-title-wraper">
+		<text class="group-title-introduce">开团说明</text>
+		<text>1、请选择以下一种方式快速开启团购</text>
+		<text>2、已有自己开启的团购，方可复制团购信息快速开团。</text>
+	</view>
+	<view class="normal-wraper">
+		<view class="step-title">创建全新的团购，开团流程:</view>
+		<view class="group-step-wraper">
+			<group-item title="团购介绍" image="/assets/images/group-step/jieshao.png"/>
+			<group-item title="添加商品" image="/assets/images/group-step/product.png"/>
+			<group-item title="团购设置" image="/assets/images/group-step/setting.png"/>
+			<group-item title="发布开团" image="/assets/images/group-step/publish.png"/>
+		</view>
+		<view class="item-wraper creae-bg" bindtap="createGroup">创建普通团购</view>
+	</view>
+	<view class="normal-wraper">
+		<view class="step-title">复制已有团购信息，开团流程:</view>
+		<view class="group-step-wraper">
+			<group-item title="团购列表" image="/assets/images/group-step/list.png"/>
+			<group-item title="复制团购" image="/assets/images/group-step/copy.png"/>
+			<group-item title="编辑团购" image="/assets/images/group-step/edit.png"/>
+			<group-item title="发布开团" image="/assets/images/group-step/publish.png"/>
+		</view>
+		<view class="item-wraper copy-color" bindtap="copyGroup">复制已有团购</view>
+	</view>
+</view>

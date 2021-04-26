@@ -1,0 +1,94 @@
+/* pages/mine/index.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #F4F6F9;
+}
+.iconfont {
+  font-family: "iconfont";
+  font-size: 30rpx;
+  text-align: center;
+}
+.content {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.action {
+  width: 90%;
+  background: #ffffff;
+  padding: 20rpx;
+  display: flex;
+  flex-flow: column;
+  margin: 10px auto 0;
+  border-radius: 15rpx;
+}
+text {
+  text-align: center;
+}
+.reason {
+  color: #333333;
+  font-size: 28rpx;
+  line-height: 2;
+}
+.money{
+  color: #000000;
+  font-weight: bold;
+  font-size: 40rpx;
+  line-height: 2;
+}
+.details {
+  color: #20BD66;
+  font-size: 24rpx;
+}
+.details text {
+  color: #333333;
+}
+.actionBtn {
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 20px auto;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #20BD66;
+  width: 160rpx;
+  text-align: center;
+  padding: 10rpx 30rpx;
+  border-radius: 5rpx;
+}
+.tips {
+  width: 90%;
+  background: #ffffff;
+  padding: 20rpx;
+  margin: 10px auto 0;
+  display: flex;
+  flex-flow: column
+}
+.Progress {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000000;
+  width: 90%;
+  background: #ffffff;
+  padding: 20rpx;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tipsTitle {
+  color: #000000;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 3;
+  text-align: left;
+}
+.tips text {
+  color: #333333;
+  font-size: 24rpx;
+  line-height: 2.2;
+  text-align: left;
+}
+

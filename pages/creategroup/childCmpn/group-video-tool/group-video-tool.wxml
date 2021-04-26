@@ -1,0 +1,13 @@
+<!--pages/creategroup/childCmpn/group-video-tool/group-video-tool.wxml-->
+<top-tool-bar title="视频" bindmoveUp="noMoveUp" bindmoveDwon="onMoveDwon" binddelete="onDelete" upEnable="{{upEnable}}" dwonEnable="{{dwonEnable}}">
+    <view>
+        <view wx:if="{{videoUrl}}" class="video-wraper">
+            <video class="video"  src="{{videoUrl}}" controls show-center-play-btn show-progress/>
+            <image bindtap="onSelectDelete" data-index="{{index}}" src="/assets/images/group/delete.png" class="delete" />
+        </view>
+        <view wx:else class="placeholder-image" bindtap="onSelectVideo">
+            <image class="video-image" src="/assets/images/group/gourp_place_video.png"/>
+            <view class="video-title">上传视频</view>
+        </view>
+    </view>
+</top-tool-bar>

@@ -1,0 +1,8 @@
+<!--pages/logistics/childCmpn/logistics-header/logistics-header.wxml-->
+<view class="header">
+    <view class="header-wraper" bindtap="onSelect">
+        <text class="header-title">{{title}}</text>
+        <image class="header-select-image" src="/assets/images/group/{{selected ? 'pro_lib_select.png' : 'pro_lib_unselect.png'}} " />
+    </view>
+    <slot></slot>
+</view>

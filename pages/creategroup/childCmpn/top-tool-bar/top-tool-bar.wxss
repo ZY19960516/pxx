@@ -1,0 +1,41 @@
+/* pages/addproduct/childCmpn/top-tool-bar/top-tool-bar.wxss */
+
+.tool-bar-wraper {
+    padding: 20rpx 0;
+    margin: 0 32rpx;
+    /* background-color: red; */
+    border-bottom: 2rpx solid #F2F4F7;
+
+}
+
+.header-item-wraper {
+    display: flex;
+    padding-bottom: 20rpx;
+}
+
+.title {
+    font-size: 26rpx;
+    color: #242629;
+}
+
+.item-wraper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-title {
+    font-size: 22rpx;
+    color: #999;
+    height: 30rpx;
+    width: 70rpx;
+    border: 2rpx solid #999;
+    text-align: center;
+    border-radius: 4rpx;
+    margin-left: 20rpx;
+}
+
+.un-enable {
+    pointer-events: none;
+    opacity: .3;
+}

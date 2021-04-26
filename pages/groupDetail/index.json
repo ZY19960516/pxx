@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-actionSheet": "../../weui/components/actionsheet/actionsheet",
+    "wxc-price": "../../components/wxc-price",
+    "counter": "/components/counter/counter"
+  },
+  "navigationBarTitleText": ""
+}

@@ -1,0 +1,51 @@
+<!--pages/mine/index.wxml-->
+  <view class="wrap">
+    <view class="form">
+      <view class="table-item" bindtap="upShopLogo">
+        <view class="table-name">
+          头像
+        </view>
+        <view class="changehead">
+          <image
+            src="{{headerImg}}"
+            mode=""
+            class="imgUrl"
+          ></image>
+          <text class="icon-tubiao-">
+          </text>
+        </view>
+      </view>
+      <view class="table-item">
+        <view class="table-name">
+          团长名称
+        </view>
+        <input type="text" bindblur="GetleaderName" value="{{leaderName}}" placeholder="请输入您的昵称" placeholder-style="color:#bfbfbf"/>
+      </view>
+      <view class="table-item">
+        <view class="table-name">
+          联系电话
+        </view>
+        <input type="text" bindblur="Getphone" value="{{phone}}" maxlength="13" placeholder="请输入您的联系电话" placeholder-style="color:#bfbfbf"/>
+      </view>
+      <view class="table-item">
+        <view class="table-name">
+          位置
+        </view>
+        <input type="text" class="addr" bindblur="GetLocationname" value="{{address}}" placeholder="请输入或选择您的地理位置" placeholder-style="color:#bfbfbf"/>
+        <text class="addricon icon-didian" bindtap="getLocation">
+        </text>
+      </view>
+      <view class="table-item">
+        <view class="table-name">
+          简介
+        </view>
+        <input type="text" bindblur="Getintroduction" value="{{introduction}}"maxlength="50" placeholder="请输入您的个人简介" placeholder-style="color:#bfbfbf"/>
+      </view>
+    </view>
+    <view class="saveBtn" bindtap="submitUserInfo">
+      保存修改
+    </view>
+  </view>
+
+
+

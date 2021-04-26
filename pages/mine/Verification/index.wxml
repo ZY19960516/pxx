@@ -1,0 +1,12 @@
+<!--商品核销-->
+<view class="content">
+    <view class="selectDateBox">
+        <block wx:key='index' wx:for="{{typeArray}}">
+            <text class="{{typeIndex == index ? 'activeText bottomLine' : 'textNamol'}}"  data-index="{{index}}" bindtap="selectType" data-item="{{item}}">{{item}}</text>
+        </block>
+    </view>
+    <verification-list list="{{list}}" bind:emit="getData"/>
+    <view class="verificationBtn" wx:if="{{verBtnflag}}" bindtap="confirmWriteOff">
+        确认核销
+    </view>
+</view>

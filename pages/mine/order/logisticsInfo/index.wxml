@@ -1,0 +1,16 @@
+<!-- 物流信息 -->
+<view class="logisticsModal">
+	<view class="content">
+        <view class="input-box">
+            <text class="inputText">快递单号:</text>
+		    <input type="text" value="{{logisticsNumber}}" bindinput="inputNumber" placeholder="请输入快递单号"/>
+        </view>
+        <view class="input-box">
+            <text class="inputText">快递公司:</text>
+            <input type="text" value="{{logisticsName}}" bindinput="inputName" placeholder="请输入快递公司"/>
+        </view>
+    </view>
+    <view class="saveLogistics" bindtap="saveLogistics">
+            保存
+    </view>
+</view>

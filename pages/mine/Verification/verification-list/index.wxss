@@ -1,0 +1,157 @@
+
+.wraper {
+    background: #ffffff;
+    /* width: 100%; */
+    padding: 0 24rpx;
+    overflow: hidden;
+    position: relative;
+}
+.infoHeader {
+    width: 100%;
+    height: 120rpx;
+    border-bottom: 1px solid #f4f4f4;
+    border-top: 1px solid #f4f4f4;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.leftBox {
+    width: 70%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.rightBox {
+    width: 20%;
+    margin-right: -30rpx;
+    background: #ffE0d2;
+    color: #ff6722;
+    text-align: center;
+    border-radius: 25rpx 0px 0px 25rpx;
+    height: 60rpx;
+    font-size: 28rpx;
+    line-height: 60rpx;
+}
+.boxNum {
+    columns: gray;
+    font-weight: bold;
+    width: 60rpx;
+    text-align: left;
+}
+.wxinfo {
+    overflow: hidden;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.wxinfo >image{
+    height: 80rpx;
+    height: 80rpx;
+}
+.wxName {
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+    flex: 1 0 auto;
+    margin-left: 20rpx;
+}
+.activityBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120rpx;
+    border-bottom: 1px solid #f4f4f4;
+}
+.shopInfo {
+    width: 100%;
+    border-bottom: 1px soild #f4f4f4;
+    padding: 20rpx 0;
+}
+.activityTitle{
+    flex: 1;
+    color: #333333;
+}
+.activityTitle {
+    flex: 1;
+    color: #07c160;
+}
+.verificationNum {
+    text-align: right;
+    color: gray;
+    width: 100%;
+    font-size: 24rpx;
+    display: inline-block;
+}
+.verificationBox {
+    display: flex;
+    justify-content: space-between;
+    min-height: 140rpx;
+    align-items: center;
+}
+.orderBox {
+    padding-bottom: 20rpx;
+}
+.iconfont {
+    font-family: "iconfont";
+    font-size: 30rpx;
+    text-align: center;
+    z-index: 1;
+}
+.shopNamebox {
+    display: flex;
+    flex-direction: column;
+}
+.goods-counter-box {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.goods-counter-img {
+    width: 38rpx;
+    height: 38rpx;
+
+}
+.buyNum {
+    font-weight: bold;
+}
+.icon-unselected,
+.icon-2weixuanzhong {
+    width: 38rpx;
+    height: 38rpx;
+}
+.icon-2weixuanzhong  {
+    color: #07c160;
+}
+.nodataBox, .nodataBox >text{
+    text-align: center;
+    width: 100%;
+}
+.icon-meiyoudingdan {
+    width: 100rpx;
+    height: 100rpx;
+    font-size: 60rpx;
+    display: inline-block;
+}
+.noData {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.shopAmount,
+.shopTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60rpx;
+}
+.amout {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.money {
+    font-weight: bold;
+    margin-left: 20rpx;
+}

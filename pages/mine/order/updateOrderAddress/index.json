@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "修改地址",
+  "usingComponents": {
+    "address-input": "../../../createaddress/childCmpn/address-input/address-input"
+  }
+}

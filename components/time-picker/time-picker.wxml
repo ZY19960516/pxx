@@ -1,0 +1,14 @@
+<!--components/time-picker/time-picker.wxml-->
+<picker 
+    class="picker" 
+    mode="multiSelector" 
+    range="{{range}}" 
+    value="{{selectIndexs}}" 
+    bindcancel="{{onCancelSelect}}"
+    bindchange="onValueChanged" 
+    bindcolumnchange="onColumnChanged">
+	<view class="show-time">
+		<view class="text-align">{{showTime}}</view>
+		<image class="more-image" src="/assets/images/group/select_more.png" />
+	</view>
+</picker>

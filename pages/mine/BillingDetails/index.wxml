@@ -1,0 +1,9 @@
+<!--账单明细-->
+<view class="content">
+    <view class="selectDateBox">
+        <block wx:key='index' wx:for="{{typeArray}}">
+            <text class="{{typeIndex == index ? 'activeText bottomLine' : 'textNamol'}}"  data-index="{{index}}" bindtap="selectType" data-item="{{item}}">{{item}}</text>
+        </block>
+    </view>
+    <com-list list="{{list}}" detailsType="BillingDetails"/>
+</view>

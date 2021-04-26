@@ -1,0 +1,23 @@
+<!--pages/logistics/childCmpn/logistics-select/logistics-select.wxml-->
+<logistics-header title="{{logistics.name}}" selected="{{logistics.selected}}" bindselect="onSelect">
+	<view wx:if="{{logistics.selected && logistics.type == 2}}">
+		<view class="select-wraper">
+			<view class="select-item-wraper">
+				<view class="title">{{logistics.itemTitle}}</view>
+				<view class="right" bindtap="onSelectSetting">
+					<view wx:if="{{logistics.value}}" class="value">{{logistics.value}}</view>
+					<view wx:else class="value-none">未设置</view>
+					<image class="more-image" src="/assets/images/group/select_more.png" />
+				</view>
+			</view>
+			<!-- <view class="select-item-wraper">
+				<view class="title">需要用户填写信息</view>
+				<view class="right" bindtap="onSelectcheckDefault">
+					<view class="value">默认选择3项</view>
+					<image class="more-image" src="/assets/images/group/select_more.png" />
+				</view>
+			</view> -->
+		</view>
+		<!-- <logistics-select title="设置运费规则" bindselect="onExpressSetting" bindcheck="onExpressCheck"/> -->
+	</view>
+</logistics-header>
